@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Household Food OS — Complete Design System & Visual Foundation. A premium design language for the AI-powered household food companion.">
+  <title>Household Food OS — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<nav class="w-[260px] shrink-0 fixed top-0 left-0 h-screen overflow-y-auto bg-bg-elevated border-r border-border-subtle flex flex-col z-sticky transition-colors duration-moderate ease-standard" id="ds-sidebar">
+  <div class="p-6 pb-4 border-b border-border-subtle">
+    <div class="flex items-center gap-3">
+      <div class="w-[36px] h-[36px] bg-brand rounded-md flex items-center justify-center shrink-0">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-sm font-bold text-text-primary leading-none tracking-tight">Household Food OS</span>
+        <span class="text-[10px] font-medium text-text-tertiary tracking-wider uppercase mt-[2px]">Design System v1.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1 p-4 px-3 overflow-y-auto">
+    <div class="mb-6">
+      <div class="text-[10px] font-bold tracking-widest uppercase text-text-tertiary px-3 mb-2">Foundation</div>
+      <a href="#principles" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#10022;</span> Design Principles
+      </a>
+      <a href="#journey" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&rarr;</span> User Journey
+      </a>
+      <a href="#colors" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-brand text-sm font-semibold bg-brand-muted" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&bull;</span> Color System
+      </a>
+      <a href="#typography" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">T</span> Typography
+      </a>
+      <a href="#spacing" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&oplus;</span> Spacing
+      </a>
+      <a href="#radius" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&square;</span> Radius
+      </a>
+      <a href="#elevation" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&lozenge;</span> Elevation
+      </a>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-[10px] font-bold tracking-widest uppercase text-text-tertiary px-3 mb-2">Components</div>
+      <a href="#navigation" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&equiv;</span> Navigation
+      </a>
+      <a href="#buttons" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&oplus;</span> Buttons
+      </a>
+      <a href="#inputs" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#9000;</span> Inputs
+      </a>
+      <a href="#cards" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#9636;</span> Cards
+      </a>
+      <a href="#feedback" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&odot;</span> Feedback
+      </a>
+      <a href="#ai" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#10022;</span> AI Components
+      </a>
+      <a href="#icons" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&otimes;</span> Iconography
+      </a>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-[10px] font-bold tracking-widest uppercase text-text-tertiary px-3 mb-2">Visual Language</div>
+      <a href="#dataviz" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#9641;</span> Data Visualization
+      </a>
+      <a href="#illustrations" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&#9726;</span> Illustrations
+      </a>
+      <a href="#motion" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">&ominus;</span> Motion
+      </a>
+      <a href="#tokens" class="flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-fast no-underline text-text-secondary text-sm font-medium hover:bg-brand-light hover:text-text-primary" onclick="setActive(this)">
+        <span class="w-[20px] h-[20px] flex items-center justify-center text-[14px] shrink-0">{}</span> Design Tokens
+      </a>
+    </div>
+  </div>
+
+  <div class="py-4 px-6 border-t border-border-subtle">
+    <div class="flex items-center gap-3 bg-bg-sunken border border-border rounded-pill p-1 cursor-pointer w-full" role="group" aria-label="Theme selector">
+      <button class="flex-1 py-2 px-3 rounded-pill text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition-all duration-normal ease-spring border-none cursor-pointer bg-bg-elevated text-text-primary shadow-sm" id="btn-light" onclick="setTheme('light')" aria-pressed="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        Light
+      </button>
+      <button class="flex-1 py-2 px-3 rounded-pill text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition-all duration-normal ease-spring text-text-tertiary border-none bg-transparent cursor-pointer" id="btn-dark" onclick="setTheme('dark')" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Dark
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="ml-[260px] flex-1 min-w-0" role="main">
+
+  <!-- Sticky Top Bar -->
+  <div class="ds-topbar">
+    <span class="ds-topbar-title">Household Food OS — Design System v1.0</span>
+    <div class="ds-topbar-actions">
+      <button class="fos-btn btn-secondary btn-sm" onclick="setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark')">
+        Toggle Theme
+      </button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="bg-bg-sunken dark:bg-[#1a1715] py-20 px-10 relative overflow-hidden border-b border-border-subtle" id="hero" aria-labelledby="hero-heading">
+    <div class="relative z-[1] grid grid-cols-2 gap-16 items-center max-w-[1200px]">
+      <div class="hero-content">
+        <div class="inline-flex items-center gap-2 text-brand text-sm font-bold tracking-widest uppercase mb-4">✦ Design System · v1.0</div>
+        <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold tracking-tighter leading-tight text-text-primary mb-6" id="hero-heading">
+          The Visual Foundation for<br>
+          <span>Household Food OS</span>
+        </h1>
+        <p class="text-lg text-text-secondary leading-relaxed mb-8">
+          A complete, production-ready design language built for a proactive household food companion. 
+          Not inventory software. Not a recipe app. A caring, intelligent partner for better food decisions.
+        </p>
+        <div class="flex gap-8">
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-brand tracking-tight">5</span>
+            <span class="text-xs text-text-tertiary font-medium tracking-wide uppercase mt-[2px]">Brand Colors</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-brand tracking-tight">8pt</span>
+            <span class="text-xs text-text-tertiary font-medium tracking-wide uppercase mt-[2px]">Grid System</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-brand tracking-tight">120+</span>
+            <span class="text-xs text-text-tertiary font-medium tracking-wide uppercase mt-[2px]">Design Tokens</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold text-brand tracking-tight">WCAG</span>
+            <span class="text-xs text-text-tertiary font-medium tracking-wide uppercase mt-[2px]">AA Compliant</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./assets/hero_food_illustration_1781548296048.png"
+          alt="Fresh ingredients arranged on a kitchen counter — top-down editorial view"
+          class="w-full rounded-3xl shadow-2xl block"
+          loading="eager"
+        >
+        <div class="absolute bottom-4 left-4 bg-bg-glass nav-blur border border-bg-glass-border rounded-xl py-3 px-4 flex items-center gap-3">
+          <div class="w-[36px] h-[36px] bg-brand-zest-500 rounded-sm flex items-center justify-center">✦</div>
+          <div>
+            <div class="text-xs font-semibold text-text-primary leading-[1.4]">AI-Powered Suggestions</div>
+            <div class="text-[10px] text-text-tertiary">3 meals ready with your pantry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DESIGN PRINCIPLES
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="principles" aria-labelledby="principles-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">✦ Foundation</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="principles-heading">Design Principles</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Six core principles guide every decision in Household Food OS. From motion to microcopy, 
+        every element must earn its place by serving these principles.
+      </p>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-zest-100); color: var(--brand-zest-600)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="principle-title">Flow-Driven, Not Dashboard</div>
+        <p class="principle-desc">The interface continuously answers "what's next?" — guiding users through a meaningful sequence rather than presenting a wall of options simultaneously.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-sage-100); color: var(--brand-sage-600)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <div class="principle-title">Proactive, Not Reactive</div>
+        <p class="principle-desc">The product anticipates needs before users feel them. Surface expiry warnings before food goes bad. Suggest meals before hunger strikes. Act before being asked.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-sky-100); color: var(--brand-sky-600)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="principle-title">Intelligence, Not Complexity</div>
+        <p class="principle-desc">AI is woven through the entire experience, not isolated in a feature. It reduces cognitive load — simplifying decisions rather than adding another thing to manage.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-plum-100); color: var(--brand-plum-500)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="principle-title">Encouraging, Never Judgemental</div>
+        <p class="principle-desc">Food choices are personal and emotional. The product celebrates wins, gently redirects habits, and never makes users feel guilty about expiry or nutrition.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-coral-100); color: var(--brand-coral-500)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="principle-title">Speed as Respect</div>
+        <p class="principle-desc">Every interaction must be fast. Scannable cards. One-tap actions. Instant feedback. Delay is a failure of respect for the user's time in their busy kitchen life.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-sage-100); color: var(--brand-sage-600)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="principle-title">Accessible by Default</div>
+        <p class="principle-desc">WCAG 2.2 AA is the minimum. Touch targets &ge;44px, meaningful color + shape + text redundancy, proper heading hierarchy, and screen reader support from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       USER JOURNEY
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="journey" aria-labelledby="journey-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">↓ Experience Flow</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="journey-heading">The Connected Journey</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Users never jump between disconnected tools. They flow through a continuous, intelligent sequence.
+        The design language must support and reinforce this progression at every step.
+      </p>
+    </div>
+
+    <div class="journey-flow" role="list" aria-label="User journey steps">
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-zest-100); color: var(--brand-zest-600)" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <div class="journey-step-label">Kitchen Scan</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-sage-100); color: var(--brand-sage-600)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="journey-step-label">Inventory Understanding</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-coral-100); color: var(--brand-coral-500)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="journey-step-label">Expiry Awareness</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-sky-100); color: var(--brand-sky-500)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+        </div>
+        <div class="journey-step-label">Meal Recommendations</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-plum-100); color: var(--brand-plum-500)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="journey-step-label">Recipe Exploration</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-zest-100); color: var(--brand-zest-600)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6V13.87z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+        </div>
+        <div class="journey-step-label">Cooking Support</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-sage-100); color: var(--brand-sage-600)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="journey-step-label">Nutrition Progress</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-zest-100); color: var(--brand-zest-500)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <div class="journey-step-label">Shopping Decisions</div>
+      </div>
+      <div class="journey-connector" aria-hidden="true" style="background: var(--color-border)"></div>
+      <div class="journey-step" role="listitem">
+        <div class="journey-step-node" style="background: var(--brand-plum-100); color: var(--brand-plum-500)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="9" r="3"/><path d="M2 21v-1a7 7 0 0 1 14 0v1"/><path d="M17 12a5 5 0 0 1 5 5v1"/></svg>
+        </div>
+        <div class="journey-step-label">Community Opportunities</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COLOR SYSTEM
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="colors" aria-labelledby="colors-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">◉ Color</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="colors-heading">Color System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        A deliberate, expressive palette rooted in warmth and nature. Five brand families, 
+        each with purpose — Zest (energy), Sage (freshness), Coral (urgency), Sky (intelligence), Plum (community).
+      </p>
+    </div>
+
+    <!-- Brand Palettes -->
+    <div class="grid gap-8">
+      <!-- Zest -->
+      <div class="grid gap-4">
+        <div class="text-sm font-bold text-text-secondary tracking-wide uppercase">Zest — Primary Brand</div>
+        <div class="flex gap-2 flex-wrap">
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-50)" title="zest-50"></div><span class="text-[10px] font-medium text-text-tertiary text-center">50</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-100)" title="zest-100"></div><span class="text-[10px] font-medium text-text-tertiary text-center">100</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-200)" title="zest-200"></div><span class="text-[10px] font-medium text-text-tertiary text-center">200</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-300)" title="zest-300"></div><span class="text-[10px] font-medium text-text-tertiary text-center">300</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-400)" title="zest-400"></div><span class="text-[10px] font-medium text-text-tertiary text-center">400</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-500); outline: 3px solid var(--color-text-primary); outline-offset: 2px;" title="zest-500 Core"></div><span class="text-[10px] font-medium text-text-tertiary text-center">500 ●</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-600)" title="zest-600"></div><span class="text-[10px] font-medium text-text-tertiary text-center">600</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-700)" title="zest-700"></div><span class="text-[10px] font-medium text-text-tertiary text-center">700</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-800)" title="zest-800"></div><span class="text-[10px] font-medium text-text-tertiary text-center">800</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-zest-900)" title="zest-900"></div><span class="text-[10px] font-medium text-text-tertiary text-center">900</span></div>
+        </div>
+      </div>
+
+      <!-- Sage -->
+      <div class="grid gap-4">
+        <div class="text-sm font-bold text-text-secondary tracking-wide uppercase">Sage — Secondary Brand</div>
+        <div class="flex gap-2 flex-wrap">
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-50)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">50</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-100)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">100</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-200)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">200</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-300)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">300</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-400)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">400</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-500); outline: 3px solid var(--color-text-primary); outline-offset: 2px;"></div><span class="text-[10px] font-medium text-text-tertiary text-center">500 ●</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-600)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">600</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-700)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">700</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-800)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">800</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sage-900)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">900</span></div>
+        </div>
+      </div>
+
+      <!-- Coral + Sky + Plum -->
+      <div class="grid gap-4">
+        <div class="text-sm font-bold text-text-secondary tracking-wide uppercase">Coral — Energy & Urgency</div>
+        <div class="flex gap-2 flex-wrap">
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-50)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">50</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-100)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">100</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-200)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">200</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-300)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">300</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-400)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">400</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-500); outline: 3px solid var(--color-text-primary); outline-offset: 2px;"></div><span class="text-[10px] font-medium text-text-tertiary text-center">500 ●</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-600)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">600</span></div>
+          <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-coral-700)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">700</span></div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="grid gap-4">
+          <div class="text-sm font-bold text-text-secondary tracking-wide uppercase">Sky — AI & Intelligence</div>
+          <div class="flex gap-2 flex-wrap">
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-50)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">50</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-100)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">100</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-200)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">200</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-300)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">300</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-400); outline: 3px solid var(--color-text-primary); outline-offset: 2px;"></div><span class="text-[10px] font-medium text-text-tertiary text-center">400 ●</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-sky-500)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">500</span></div>
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div class="text-sm font-bold text-text-secondary tracking-wide uppercase">Plum — Community & Premium</div>
+          <div class="flex gap-2 flex-wrap">
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-50)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">50</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-100)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">100</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-200)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">200</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-300)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">300</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-400); outline: 3px solid var(--color-text-primary); outline-offset: 2px;"></div><span class="text-[10px] font-medium text-text-tertiary text-center">400 ●</span></div>
+            <div class="flex flex-col items-center gap-2"><div class="w-[72px] h-[72px] rounded-lg shadow-sm relative cursor-pointer transition-all duration-normal ease-spring hover:scale-[1.08] hover:-translate-y-[2px] hover:shadow-lg" style="background: var(--brand-plum-500)"></div><span class="text-[10px] font-medium text-text-tertiary text-center">500</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Semantic Colors -->
+      <div class="grid gap-4">
+        <div class="text-sm font-bold text-text-secondary tracking-wide uppercase" style="margin-bottom: var(--space-4)">Expiry Risk Colors</div>
+        <div class="flex gap-2 p-4 bg-card-bg border border-card-border rounded-xl shadow-sm flex-wrap" role="list" aria-label="Expiry risk color indicators">
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(147,55%,92%); color: hsl(147,55%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-fresh)"></div> Fresh (14+ days)
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(93,60%,90%); color: hsl(93,60%,26%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-good)"></div> Good (7–13 days)
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(48,100%,90%); color: hsl(40,90%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-watchout)"></div> Watch Out (4–6 days)
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(33,100%,90%); color: hsl(28,90%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-soon)"></div> Use Soon (2–3 days)
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(12,82%,92%); color: hsl(8,80%,30%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-urgent)"></div> Urgent (Today/Tomorrow)
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(0,72%,92%); color: hsl(0,72%,30%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--expiry-expired)"></div> Expired
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4">
+        <div class="text-sm font-bold text-text-secondary tracking-wide uppercase" style="margin-bottom: var(--space-4)">Nutrition Macro Colors</div>
+        <div class="flex gap-2 p-4 bg-card-bg border border-card-border rounded-xl shadow-sm flex-wrap" role="list" aria-label="Nutrition color indicators">
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(24,100%,93%); color: hsl(24,90%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-protein)"></div> Protein
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(48,100%,90%); color: hsl(40,90%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-carbs)"></div> Carbohydrates
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(12,85%,92%); color: hsl(8,80%,30%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-fat)"></div> Healthy Fats
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(147,50%,92%); color: hsl(147,50%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-fiber)"></div> Dietary Fiber
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(198,72%,92%); color: hsl(198,70%,28%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-vitamins)"></div> Vitamins
+          </div>
+          <div class="flex items-center gap-2 py-2 px-3 rounded-pill text-xs font-semibold" style="background: hsl(270,46%,92%); color: hsl(270,46%,30%)" role="listitem">
+            <div class="w-[8px] h-[8px] rounded-full" style="background: var(--nutrition-minerals)"></div> Minerals
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TYPOGRAPHY
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="typography" aria-labelledby="typography-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">T Typography</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="typography-heading">Typography System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Plus Jakarta Sans is the primary typeface — modern, geometric, warm, and highly readable at all sizes.
+        Optimized for mobile-first reading in kitchen environments.
+      </p>
+    </div>
+
+    <!-- Type Scale -->
+    <div class="label-overline">Type Scale</div>
+    <div class="flex flex-col gap-6" role="list">
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">Display</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">60px · 800 · −0.04em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-6xl); font-weight: var(--weight-extrabold); letter-spacing: var(--tracking-tighter)">Dinner tonight</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">H1</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">48px · 800 · −0.04em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-5xl); font-weight: var(--weight-extrabold); letter-spacing: var(--tracking-tighter)">Your Pantry</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">H2</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">36px · 800 · −0.02em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-4xl); font-weight: var(--weight-extrabold); letter-spacing: var(--tracking-tight)">Meal Suggestions</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">H3</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">30px · 700 · −0.02em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-3xl); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight)">Expiring This Week</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">H4</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">24px · 700 · −0.02em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-2xl); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight)">Mediterranean Bowl</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">H5</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">20px · 700 · 0em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-xl); font-weight: var(--weight-bold)">Pantry Overview</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">Body Large</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">18px · 400 · 0em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-lg); line-height: var(--leading-relaxed)">You have 3 items expiring within 48 hours. Based on what's in your fridge, you can make 5 different meals tonight.</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">Body</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">15px · 400 · 0em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-base); line-height: var(--leading-relaxed)">Scan your kitchen to instantly understand your pantry. Our AI identifies ingredients and tracks expiry dates automatically, so you never waste food again.</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">Small</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">13px · 500 · 0em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-sm); font-weight: var(--weight-medium); color: var(--color-text-secondary)">2 portions · 380 kcal · 35 min</div>
+      </div>
+      <div class="flex items-baseline gap-8 py-5 border-b border-border-subtle" role="listitem">
+        <div class="w-[120px] shrink-0">
+          <div class="text-xs font-semibold text-text-tertiary tracking-wide">Caption</div>
+          <div class="text-[10px] text-text-disabled mt-[2px]">12px · 600 · +0.06em</div>
+        </div>
+        <div class="flex-1 text-text-primary" style="font-size: var(--text-xs); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-text-tertiary)">PANTRY · EXPIRY TRACKING · AI MEALS</div>
+      </div>
+    </div>
+
+    <!-- Weight Showcase -->
+    <div class="divider"></div>
+    <div class="label-overline">Font Weights</div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-4 mt-6">
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 300">Light 300</div>
+        <div class="text-xs text-text-tertiary font-medium">Subtle emphasis, large headers</div>
+      </div>
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 400">Regular 400</div>
+        <div class="text-xs text-text-tertiary font-medium">Body copy, descriptions</div>
+      </div>
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 500">Medium 500</div>
+        <div class="text-xs text-text-tertiary font-medium">UI labels, secondary info</div>
+      </div>
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 600">Semibold 600</div>
+        <div class="text-xs text-text-tertiary font-medium">Buttons, nav items, badges</div>
+      </div>
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 700">Bold 700</div>
+        <div class="text-xs text-text-tertiary font-medium">Card titles, section heads</div>
+      </div>
+      <div class="bg-card-bg border border-card-border rounded-xl p-5 flex flex-col gap-2">
+        <div class="text-2xl text-text-primary" style="font-weight: 800">ExtraBold 800</div>
+        <div class="text-xs text-text-tertiary font-medium">Display, hero moments</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPACING & RADIUS & ELEVATION
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="spacing" aria-labelledby="spacing-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⊞ Spacing</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="spacing-heading">Spacing System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">An 8-point base grid system that creates visual rhythm and harmony across all layouts.</p>
+    </div>
+
+    <div class="spacing-grid" role="list">
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-1 · 4px</div><div class="spacing-block" style="width: 4px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-2 · 8px</div><div class="spacing-block" style="width: 8px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-3 · 12px</div><div class="spacing-block" style="width: 12px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-4 · 16px</div><div class="spacing-block" style="width: 16px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-5 · 20px</div><div class="spacing-block" style="width: 20px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-6 · 24px</div><div class="spacing-block" style="width: 24px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-8 · 32px</div><div class="spacing-block" style="width: 32px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-10 · 40px</div><div class="spacing-block" style="width: 40px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-12 · 48px</div><div class="spacing-block" style="width: 48px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-16 · 64px</div><div class="spacing-block" style="width: 64px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-20 · 80px</div><div class="spacing-block" style="width: 80px"></div></div>
+      <div class="spacing-row" role="listitem"><div class="spacing-meta">--space-24 · 96px</div><div class="spacing-block" style="width: 96px"></div></div>
+    </div>
+  </section>
+
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="radius" aria-labelledby="radius-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">◻ Radius</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="radius-heading">Radius System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">Friendly, modern geometry. Larger radii for prominent surfaces. Tighter radii for dense content.</p>
+    </div>
+
+    <div class="radius-grid" role="list">
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-xs)"></div>
+        <div class="radius-label">xs · 4px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-sm)"></div>
+        <div class="radius-label">sm · 8px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-md)"></div>
+        <div class="radius-label">md · 12px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-lg)"></div>
+        <div class="radius-label">lg · 16px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-xl)"></div>
+        <div class="radius-label">xl · 20px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-2xl)"></div>
+        <div class="radius-label">2xl · 24px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-3xl)"></div>
+        <div class="radius-label">3xl · 32px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-pill)"></div>
+        <div class="radius-label">Pill · 999px</div>
+      </div>
+      <div class="radius-block" role="listitem">
+        <div class="radius-square" style="border-radius: var(--radius-full)"></div>
+        <div class="radius-label">Full · Circle</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="elevation" aria-labelledby="elevation-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">◈ Elevation</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="elevation-heading">Elevation System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">Layered depth creates hierarchy. Hover each block to feel the transition.</p>
+    </div>
+
+    <div class="elevation-grid" role="list">
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: none; border: 1px solid var(--color-border)"></div><div class="elevation-label">Flat<br>border only</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-xs)"></div><div class="elevation-label">xs<br>Dividers</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-sm)"></div><div class="elevation-label">sm<br>Chips</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-md)"></div><div class="elevation-label">md<br>Cards</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-lg)"></div><div class="elevation-label">lg<br>Dropdowns</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-xl)"></div><div class="elevation-label">xl<br>Modals</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-2xl)"></div><div class="elevation-label">2xl<br>Sheets</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-zest)"></div><div class="elevation-label">Brand Zest<br>Colored</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-sage)"></div><div class="elevation-label">Brand Sage<br>Colored</div></div>
+      <div class="elevation-block" role="listitem"><div class="elevation-square" style="box-shadow: var(--shadow-sky)"></div><div class="elevation-label">AI Sky<br>Colored</div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NAVIGATION COMPONENTS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="navigation" aria-labelledby="navigation-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⊡ Navigation</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="navigation-heading">Navigation Components</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">A floating pill nav that feels soft, premium, and frictionless. The active item expands with a tinted pill containing icon and label. Inactive items remain icon-only with low visual weight.</p>
+    </div>
+
+    <div class="nav-showcase">
+      <!-- Bottom Nav -->
+      <div>
+        <div class="label-overline">Bottom Navigation — Floating Pill (Home Active)</div>
+        <div class="bottom-nav-preview">
+          <nav class="bottom-nav" aria-label="Primary navigation">
+            <div class="bottom-nav-item active" role="button" aria-label="Home — current page" aria-current="page" tabindex="0" id="nav-home">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+                  <path d="M9 21V12h6v9"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Home</span>
+            </div>
+            <div class="bottom-nav-item" role="button" aria-label="Pantry" tabindex="0" id="nav-pantry">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Pantry</span>
+            </div>
+            <div class="bottom-nav-item" role="button" aria-label="Meals" tabindex="0" id="nav-meals">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 20h20"/>
+                  <path d="M6 20V10M18 20V10"/>
+                  <path d="M6 10a6 6 0 0 1 12 0"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Meals</span>
+            </div>
+            <div class="bottom-nav-item" role="button" aria-label="Community" tabindex="0" id="nav-community">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="9" cy="7" r="4"/>
+                  <circle cx="17" cy="9" r="3"/>
+                  <path d="M2 21v-1a7 7 0 0 1 14 0v1"/>
+                  <path d="M17 12a5 5 0 0 1 5 5v1"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Community</span>
+            </div>
+          </nav>
+        </div>
+        <div class="label-overline" style="margin-top: var(--space-6)">Bottom Navigation — Pantry Active</div>
+        <div class="bottom-nav-preview">
+          <nav class="bottom-nav" aria-label="Primary navigation (Pantry active)">
+            <div class="bottom-nav-item" role="button" aria-label="Home" tabindex="0">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+                  <path d="M9 21V12h6v9"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Home</span>
+            </div>
+            <div class="bottom-nav-item active" role="button" aria-label="Pantry — current page" aria-current="page" tabindex="0">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Pantry</span>
+            </div>
+            <div class="bottom-nav-item" role="button" aria-label="Meals" tabindex="0">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 20h20"/>
+                  <path d="M6 20V10M18 20V10"/>
+                  <path d="M6 10a6 6 0 0 1 12 0"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Meals</span>
+            </div>
+            <div class="bottom-nav-item" role="button" aria-label="Community" tabindex="0">
+              <div class="nav-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="9" cy="7" r="4"/>
+                  <circle cx="17" cy="9" r="3"/>
+                  <path d="M2 21v-1a7 7 0 0 1 14 0v1"/>
+                  <path d="M17 12a5 5 0 0 1 5 5v1"/>
+                </svg>
+              </div>
+              <span class="nav-item-label">Community</span>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Tab Bar & Segmented Control -->
+      <div class="two-col">
+        <div>
+          <div class="label-overline">Tab Bar</div>
+          <div class="tab-bar" role="tablist" aria-label="Content sections">
+            <div class="tab-item active" role="tab" aria-selected="true" aria-controls="tab-all" id="tab-all-trigger" tabindex="0">All Items</div>
+            <div class="tab-item" role="tab" aria-selected="false" tabindex="-1">Expiring</div>
+            <div class="tab-item" role="tab" aria-selected="false" tabindex="-1">Proteins</div>
+            <div class="tab-item" role="tab" aria-selected="false" tabindex="-1">Produce</div>
+            <div class="tab-item" role="tab" aria-selected="false" tabindex="-1">Pantry</div>
+          </div>
+        </div>
+        <div>
+          <div class="label-overline">Segmented Control</div>
+          <div>
+            <div class="segmented-control" role="group" aria-label="View toggle">
+              <button class="seg-btn active" aria-pressed="true">Grid</button>
+              <button class="seg-btn" aria-pressed="false">List</button>
+              <button class="seg-btn" aria-pressed="false">Map</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BUTTONS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="buttons" aria-labelledby="buttons-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⊕ Buttons</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="buttons-heading">Button System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">Pill-shaped buttons with expressive colored shadows. Each variant has a clear semantic purpose.</p>
+    </div>
+
+    <div class="label-overline">Primary Actions</div>
+    <div class="buttons-grid">
+      <button class="fos-btn btn-primary btn-lg" id="btn-scan-kitchen" aria-label="Scan Kitchen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        Scan Kitchen
+      </button>
+      <button class="fos-btn btn-primary btn-md" id="btn-view-meals" aria-label="View Meals">View Meals</button>
+      <button class="fos-btn btn-primary btn-sm" id="btn-add-item" aria-label="Add Item">+ Add Item</button>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label-overline">Variants</div>
+    <div class="buttons-grid">
+      <button class="fos-btn btn-primary btn-md" id="btn-primary-demo">Primary — Zest</button>
+      <button class="fos-btn btn-sage btn-md" id="btn-sage-demo">Secondary — Sage</button>
+      <button class="fos-btn btn-ai btn-md" id="btn-ai-demo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        AI Suggest
+      </button>
+      <button class="fos-btn btn-secondary btn-md" id="btn-outline-demo">Outline</button>
+      <button class="fos-btn btn-ghost btn-md" id="btn-ghost-demo">Ghost</button>
+      <button class="fos-btn btn-danger btn-md" id="btn-danger-demo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Discard
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INPUTS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="inputs" aria-labelledby="inputs-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⌨ Inputs</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="inputs-heading">Input Components</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">Clean, focused inputs with brand-colored focus rings. Designed for quick data entry in kitchen contexts.</p>
+    </div>
+
+    <div class="inputs-grid">
+      <!-- Search -->
+      <div class="input-group" style="grid-column: 1 / -1">
+        <label class="input-label" for="search-pantry">Search Pantry</label>
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <input type="search" class="fos-input search-input" id="search-pantry" placeholder="Search ingredients, meals, or recipes..." aria-label="Search pantry items">
+        </div>
+      </div>
+
+      <!-- Text Input -->
+      <div class="input-group">
+        <label class="input-label" for="add-ingredient">Add Ingredient</label>
+        <input type="text" class="fos-input" id="add-ingredient" placeholder="e.g. Organic Spinach" aria-label="Ingredient name">
+      </div>
+
+      <!-- Quantity -->
+      <div class="input-group">
+        <label class="input-label" for="quantity">Quantity</label>
+        <input type="text" class="fos-input" id="quantity" placeholder="e.g. 200g · 1 bunch · 3 cans" aria-label="Ingredient quantity">
+      </div>
+
+      <!-- Expiry -->
+      <div class="input-group">
+        <label class="input-label" for="expiry-date">Expiry Date</label>
+        <input type="date" class="fos-input" id="expiry-date" aria-label="Expiry date">
+      </div>
+
+      <!-- Notes -->
+      <div class="input-group">
+        <label class="input-label" for="notes">Notes</label>
+        <input type="text" class="fos-input" id="notes" placeholder="e.g. Left side of fridge" aria-label="Storage notes">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Filter Tags -->
+    <div class="label-overline">Filter Tags</div>
+    <div class="filter-tags" role="group" aria-label="Filter by category">
+      <button class="filter-tag active" aria-pressed="true">All</button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+        Produce
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16c.5-1.5 1-3 1-4.5A5.5 5.5 0 0 0 11.5 6a7.5 7.5 0 0 0-6 3c-1.5 2-1 5.5.5 7s4.5 1.5 6 .5c1.5-1 2.5-.5 4 1z"/><circle cx="9" cy="11" r="1"/></svg>
+        Protein
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h12V10L14 6H10L6 10z"/><path d="M6 12h12"/><circle cx="12" cy="15" r="1"/></svg>
+        Dairy
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 10a2 2 0 0 0-2 2v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6a2 2 0 0 0-2-2M5 10h14"/></svg>
+        Pantry
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg>
+        Frozen
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-3.25 3.5-5.5 7.5-6.5a14 14 0 0 1 12.5-3.5c-.25-4.5-3-9.25-7.5-10.25a13.5 13.5 0 0 0-10.5 4c-.75 2.5-.5 7 1.5 9.5a11 11 0 0 0-3.5 6.75z"/><path d="M12 12v-4"/></svg>
+        Herbs
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><ellipse cx="12" cy="6" rx="7" ry="2"/><ellipse cx="12" cy="18" rx="7" ry="2"/></svg>
+        Canned
+      </button>
+      <button class="filter-tag" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Expiring
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CARDS SHOWCASE
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="cards" aria-labelledby="cards-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">▤ Cards</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="cards-heading">Card System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Cards are the primary content container. Each card type tells a specific story — tactile, interactive, and information-rich without being overwhelming.
+      </p>
+    </div>
+
+    <!-- Meal Cards -->
+    <div class="label-overline">Meal Recommendation Cards</div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
+      <!-- Meal Card 1 -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" aria-label="Mediterranean Grain Bowl — Meal card">
+        <img
+          class="w-full h-[180px] object-cover block"
+          src="./assets/meal_card_photo_1781548326633.png"
+          alt="Mediterranean grain bowl with quinoa, roasted vegetables, and avocado"
+          loading="lazy"
+        >
+        <div class="p-5 pb-6">
+          <div class="flex gap-2 mb-3 flex-wrap">
+            <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sage-100 text-brand-sage-700 dark:bg-[hsla(147,32%,48%,0.18)] dark:text-brand-sage-300">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+              Healthy
+            </span>
+            <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sky-100 text-brand-sky-600 dark:bg-[hsla(198,72%,50%,0.18)] dark:text-brand-sky-200">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              AI Pick
+            </span>
+            <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-zest-100 text-brand-zest-700 dark:bg-[hsla(33,93%,50%,0.18)] dark:text-brand-zest-300">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Use Soon
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-text-primary leading-snug mb-2 tracking-tight">Mediterranean Grain Bowl</h3>
+          <div class="flex gap-4 text-text-tertiary text-xs font-medium">
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 15 11"/></svg>
+              35 min
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              2 serves
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-zest-500);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              4.8
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center justify-between py-4 px-5 border-t border-border-subtle">
+          <div class="flex gap-4" aria-label="Nutritional info">
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary">380</span>
+              <span class="text-[10px] text-text-tertiary">kcal</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary" style="color: var(--nutrition-protein)">22g</span>
+              <span class="text-[10px] text-text-tertiary">protein</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary" style="color: var(--nutrition-carbs)">48g</span>
+              <span class="text-[10px] text-text-tertiary">carbs</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary" style="color: var(--nutrition-fat)">14g</span>
+              <span class="text-[10px] text-text-tertiary">fat</span>
+            </div>
+          </div>
+          <div class="w-[36px] h-[36px] bg-brand-zest-500 rounded-full flex items-center justify-center text-white text-[16px] transition-transform duration-fast ease-spring group-hover:scale-110" role="button" aria-label="View Mediterranean Grain Bowl recipe" tabindex="0">→</div>
+        </div>
+      </article>
+
+      <!-- Meal Card 2 — Dark/Gradient variant -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" style="background: linear-gradient(145deg, hsl(30,8%,12%), hsl(147,8%,14%)); border-color: hsl(30,8%,20%);" aria-label="Lemon Herb Salmon — Dark Meal card">
+        <div style="height: 180px; background: linear-gradient(145deg, var(--brand-sage-800), var(--brand-sky-600)); display: flex; align-items: center; justify-content: center;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" style="color: hsla(38,100%,75%,0.9);"><path d="M8.35 16.65c.13.08.27.14.41.19a6.5 6.5 0 0 0 7.48-7.48 2 2 0 0 0-.19-.41L12 4.88 7.88 9a2 2 0 0 0-.19.41 6.5 6.5 0 0 0 .66 7.24Z"/><path d="M9.64 5.64a5 5 0 1 1 7.07 7.07"/></svg>
+        </div>
+        <div class="p-5 pb-6">
+          <div class="flex gap-2 mb-3 flex-wrap">
+            <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide" style="background: hsla(198,72%,50%,0.2); color: var(--brand-sky-300)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12c-2.5 3-7 4-10 2s-4.5-3.5-7-2c1-1.5 1-3.5 0-5 2.5 1.5 4 0 7-2 3-2 7.5-1 10 2Z"/><path d="M2 12c0-2-1-3-2-3v6c1 0 2-1 2-3Z"/><circle cx="18" cy="10" r="1"/></svg>
+              High Protein
+            </span>
+            <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide" style="background: hsla(147,50%,40%,0.2); color: var(--brand-sage-300)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+              Low Carb
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-text-primary leading-snug mb-2 tracking-tight" style="color: hsl(38,20%,95%)">Lemon Herb Salmon</h3>
+          <div class="flex gap-4 text-text-tertiary text-xs font-medium" style="color: hsl(38,8%,60%)">
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 15 11"/></svg>
+              20 min
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              1 serve
+            </span>
+            <span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-zest-500);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              4.9
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center justify-between py-4 px-5 border-t border-border-subtle" style="border-top-color: hsl(30,8%,20%)">
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary" style="color: hsl(38,20%,90%)">285</span>
+              <span class="text-[10px] text-text-tertiary" style="color: hsl(38,8%,55%)">kcal</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="text-sm font-bold text-text-primary" style="color: var(--nutrition-protein)">38g</span>
+              <span class="text-[10px] text-text-tertiary" style="color: hsl(38,8%,55%)">protein</span>
+            </div>
+          </div>
+          <div class="w-[36px] h-[36px] bg-brand-zest-500 rounded-full flex items-center justify-center text-white text-[16px] transition-transform duration-fast ease-spring group-hover:scale-110" role="button" aria-label="View Lemon Herb Salmon recipe" tabindex="0">→</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Ingredient/Inventory Cards -->
+    <div class="label-overline">Inventory Cards</div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group p-5 flex items-center gap-4" aria-label="Spinach inventory card">
+        <div class="w-[52px] h-[52px] rounded-xl flex items-center justify-center text-[24px] shrink-0" style="background: var(--brand-sage-100); color: var(--brand-sage-700);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-text-primary tracking-tight">Organic Spinach</div>
+          <div class="text-xs text-text-secondary mt-[2px]">200g · Produce · Fridge</div>
+          <div class="expiry-progress-bar" style="margin-top: var(--space-2)">
+            <div class="expiry-progress-fill" style="width: 20%; background: var(--expiry-urgent)"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-1">
+          <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide bg-[#ffe4dc] text-[#931f0e] dark:bg-[hsla(12,82%,48%,0.18)] dark:text-[#eb5e4d]" role="status">1 day</div>
+          <div class="text-[10px] text-text-tertiary">Use today!</div>
+        </div>
+      </article>
+
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group p-5 flex items-center gap-4" aria-label="Cherry Tomatoes inventory card">
+        <div class="w-[52px] h-[52px] rounded-xl flex items-center justify-center text-[24px] shrink-0" style="background: hsl(12,82%,92%); color: hsl(12,82%,45%);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 2v2M9 3l1.5 2.5M15 3l-1.5 2.5"/></svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-text-primary tracking-tight">Cherry Tomatoes</div>
+          <div class="text-xs text-text-secondary mt-[2px]">500g · Produce · Counter</div>
+          <div class="expiry-progress-bar" style="margin-top: var(--space-2)">
+            <div class="expiry-progress-fill" style="width: 55%; background: var(--expiry-soon)"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-1">
+          <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide bg-[#ffe6cc] text-[#914608] dark:bg-[hsla(33,100%,50%,0.18)] dark:text-[#eb9c5e]">3 days</div>
+          <div class="text-[10px] text-text-tertiary">Jun 18</div>
+        </div>
+      </article>
+
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group p-5 flex items-center gap-4" aria-label="Salmon Fillet inventory card">
+        <div class="w-[52px] h-[52px] rounded-xl flex items-center justify-center text-[24px] shrink-0" style="background: hsl(24,90%,92%); color: hsl(24,90%,45%);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12c-2.5 3-7 4-10 2s-4.5-3.5-7-2c1-1.5 1-3.5 0-5 2.5 1.5 4 0 7-2 3-2 7.5-1 10 2Z"/><path d="M2 12c0-2-1-3-2-3v6c1 0 2-1 2-3Z"/><circle cx="18" cy="10" r="1"/></svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="text-base font-semibold text-text-primary tracking-tight">Salmon Fillet</div>
+          <div class="text-xs text-text-secondary mt-[2px]">400g · Protein · Freezer</div>
+          <div class="expiry-progress-bar" style="margin-top: var(--space-2)">
+            <div class="expiry-progress-fill" style="width: 85%; background: var(--expiry-fresh)"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-1">
+          <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide bg-[#e5f5eb] text-[#22774d] dark:bg-[hsla(147,55%,40%,0.18)] dark:text-[#52c186]">28 days</div>
+          <div class="text-[10px] text-text-tertiary">Jul 14</div>
+        </div>
+      </article>
+
+      <!-- Expiry Warning Card -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" aria-label="Expiry warning card">
+        <div class="expiry-card">
+          <div class="expiry-card-header">
+            <h3 class="expiry-card-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-coral-500);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Expiring Soon
+            </h3>
+            <span class="expiry-count-badge" role="status" aria-live="polite">3 items</span>
+          </div>
+          <div class="expiry-list" role="list">
+            <div class="expiry-list-item" role="listitem">
+              <div class="expiry-list-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-sage-500);"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+              </div>
+              <div class="expiry-list-info">
+                <div class="expiry-list-name">Spinach</div>
+                <div class="expiry-progress-bar" style="margin-top: 4px"><div class="expiry-progress-fill" style="width: 10%; background: var(--expiry-urgent)"></div></div>
+              </div>
+              <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide bg-[#ffe4dc] text-[#931f0e] dark:bg-[hsla(12,82%,48%,0.18)] dark:text-[#eb5e4d]">Today</div>
+            </div>
+            <div class="expiry-list-item" role="listitem">
+              <div class="expiry-list-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-zest-500);"><path d="M12 2C8 2 4 4 4 8c0 4 2 6 2 10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2c0-4 2-6 2-10 0-4-4-6-8-6Z"/><path d="M8 10V6M16 10V6M12 12V4"/></svg>
+              </div>
+              <div class="expiry-list-info">
+                <div class="expiry-list-name">Sourdough Bread</div>
+                <div class="expiry-progress-bar" style="margin-top: 4px"><div class="expiry-progress-fill" style="width: 30%; background: var(--expiry-soon)"></div></div>
+              </div>
+              <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide bg-[#ffe6cc] text-[#914608] dark:bg-[hsla(33,100%,50%,0.18)] dark:text-[#eb9c5e]">2 days</div>
+            </div>
+            <div class="expiry-list-item" role="listitem">
+              <div class="expiry-list-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-sky-500);"><path d="M6 18h12V10L14 6H10L6 10z"/><path d="M6 12h12"/><circle cx="12" cy="15" r="1"/></svg>
+              </div>
+              <div class="expiry-list-info">
+                <div class="expiry-list-name">Oat Milk</div>
+                <div class="expiry-progress-bar" style="margin-top: 4px"><div class="expiry-progress-fill" style="width: 50%; background: var(--expiry-watchout)"></div></div>
+              </div>
+              <div class="py-[3px] px-3 rounded-pill text-[10px] font-bold tracking-wide" style="background: hsl(48,100%,90%); color: hsl(40,90%,28%)">4 days</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Community Card -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" aria-label="Community exchange card">
+        <div class="community-card">
+          <img
+            class="community-card-image"
+            src="./assets/community_illustration_1781548363261.png"
+            alt="Neighbours sharing food in a friendly community"
+            loading="lazy"
+          >
+          <div class="community-card-body">
+            <div class="community-user">
+              <div class="community-avatar" style="background: linear-gradient(135deg, var(--brand-plum-400), var(--brand-sky-400))">S</div>
+              <div class="community-user-info">
+                <div class="community-user-name">Sarah M.</div>
+                <div class="community-distance">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  0.4 km away · Maple St.
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="label-overline" style="margin-bottom: var(--space-2)">Offering</div>
+              <div class="community-offer-list">
+                <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sage-100 text-brand-sage-700 dark:bg-[hsla(147,32%,48%,0.18)] dark:text-brand-sage-300">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.35 16.65c.13.08.27.14.41.19a6.5 6.5 0 0 0 7.48-7.48 2 2 0 0 0-.19-.41L12 4.88 7.88 9a2 2 0 0 0-.19.41 6.5 6.5 0 0 0 .66 7.24Z"/><path d="M9.64 5.64a5 5 0 1 1 7.07 7.07"/></svg>
+                  3 Lemons
+                </span>
+                <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sage-100 text-brand-sage-700 dark:bg-[hsla(147,32%,48%,0.18)] dark:text-brand-sage-300">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+                  Fresh Basil
+                </span>
+                <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sage-100 text-brand-sage-700 dark:bg-[hsla(147,32%,48%,0.18)] dark:text-brand-sage-300">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.2 21.8a1 1 0 0 1 0-1.4l15-15a5 5 0 0 1 7 7l-15 15a1 1 0 0 1-1.4 0Z"/><path d="M18.5 2.5a3 3 0 0 1 3 3"/></svg>
+                  Carrots
+                </span>
+              </div>
+            </div>
+            <div class="community-cta">
+              <button class="fos-btn btn-sage btn-sm" id="btn-request-exchange">Request Exchange</button>
+              <button class="fos-btn btn-secondary btn-sm" id="btn-message">Message</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Progress Card -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" aria-label="Daily nutrition progress card">
+        <div class="progress-card">
+          <div class="progress-card-header">
+            <h3 class="progress-card-title">Today's Nutrition</h3>
+            <span class="progress-card-date">Mon, Jun 16</span>
+          </div>
+          <div class="progress-ring-container">
+            <div class="progress-ring-wrap" aria-hidden="true">
+              <svg class="progress-ring-svg" width="100" height="100" viewBox="0 0 100 100">
+                <circle class="progress-ring-bg" cx="50" cy="50" r="44"></circle>
+                <circle
+                  class="progress-ring-fill"
+                  cx="50" cy="50" r="44"
+                  stroke="url(#progressGradient)"
+                  stroke-dasharray="276"
+                  stroke-dashoffset="90"
+                ></circle>
+                <defs>
+                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="var(--brand-zest-400)"/>
+                    <stop offset="100%" stop-color="var(--brand-sage-400)"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="progress-ring-label">
+                <div class="progress-ring-value">67%</div>
+                <div class="progress-ring-sub">1,340 kcal</div>
+              </div>
+            </div>
+            <div class="progress-macros">
+              <div class="macro-row">
+                <div class="macro-header">
+                  <span class="macro-name">Protein</span>
+                  <span class="macro-value" style="color: var(--nutrition-protein)">62 / 90g</span>
+                </div>
+                <div class="macro-bar"><div class="macro-bar-fill" style="width: 69%; background: var(--nutrition-protein)"></div></div>
+              </div>
+              <div class="macro-row">
+                <div class="macro-header">
+                  <span class="macro-name">Carbs</span>
+                  <span class="macro-value" style="color: var(--nutrition-carbs)">148 / 220g</span>
+                </div>
+                <div class="macro-bar"><div class="macro-bar-fill" style="width: 67%; background: var(--nutrition-carbs)"></div></div>
+              </div>
+              <div class="macro-row">
+                <div class="macro-header">
+                  <span class="macro-name">Fat</span>
+                  <span class="macro-value" style="color: var(--nutrition-fat)">44 / 65g</span>
+                </div>
+                <div class="macro-bar"><div class="macro-bar-fill" style="width: 68%; background: var(--nutrition-fat)"></div></div>
+              </div>
+              <div class="macro-row">
+                <div class="macro-header">
+                  <span class="macro-name">Fiber</span>
+                  <span class="macro-value" style="color: var(--nutrition-fiber)">18 / 30g</span>
+                </div>
+                <div class="macro-bar"><div class="macro-bar-fill" style="width: 60%; background: var(--nutrition-fiber)"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEEDBACK COMPONENTS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="feedback" aria-labelledby="feedback-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">◎ Feedback</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="feedback-heading">Feedback Components</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">Alerts, toasts, skeletons, and empty states communicate system status while maintaining the product's encouraging, non-judgemental tone.</p>
+    </div>
+
+    <div class="two-col">
+      <!-- Alerts -->
+      <div>
+        <div class="label-overline">Alerts</div>
+        <div class="alerts-grid" role="list">
+          <div class="fos-alert alert-success" role="alert" aria-live="polite">
+            <div class="alert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">Kitchen scanned — 24 items found</div>
+              <div class="alert-body">You have 3 items to use up soon. Here are 5 meals you can make tonight.</div>
+            </div>
+          </div>
+          <div class="fos-alert alert-warning" role="alert">
+            <div class="alert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">Let's use your spinach today</div>
+              <div class="alert-body">Spinach, bread, and oat milk are best used in the next 48 hours. Perfect for a quick frittata.</div>
+            </div>
+          </div>
+          <div class="fos-alert alert-error" role="alert">
+            <div class="alert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">Scan needs better lighting</div>
+              <div class="alert-body">Move closer to a light source and try again — we'll get it on the next go.</div>
+            </div>
+          </div>
+          <div class="fos-alert alert-info" role="status">
+            <div class="alert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">5 meal ideas ready for you</div>
+              <div class="alert-body">Based on your pantry, we've planned meals that use everything before it expires.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toasts & Empty State -->
+      <div>
+        <div class="label-overline">Toasts</div>
+        <div class="toast-showcase" role="status" aria-live="polite">
+          <div class="fos-toast">
+            <div class="toast-icon" style="background: var(--color-success-bg); color: var(--color-success)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="toast-text">
+              <div class="toast-title">Item added to pantry</div>
+              <div class="toast-sub">Organic Spinach · 200g · Expiry Jun 17</div>
+            </div>
+            <div class="toast-close" role="button" aria-label="Dismiss notification" tabindex="0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+          </div>
+          <div class="fos-toast">
+            <div class="toast-icon" style="background: var(--brand-zest-100); color: var(--brand-zest-600)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M6 20V10M18 20V10"/><path d="M6 10a6 6 0 0 1 12 0"/></svg>
+            </div>
+            <div class="toast-text">
+              <div class="toast-title">Meal plan ready</div>
+              <div class="toast-sub">5 meals using your current pantry</div>
+            </div>
+            <div class="toast-close" role="button" aria-label="Dismiss notification" tabindex="0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+          </div>
+          <div class="fos-toast">
+            <div class="toast-icon" style="background: var(--brand-plum-100); color: var(--brand-plum-600)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="9" r="3"/><path d="M2 21v-1a7 7 0 0 1 14 0v1"/><path d="M17 12a5 5 0 0 1 5 5v1"/></svg>
+            </div>
+            <div class="toast-text">
+              <div class="toast-title">Exchange confirmed</div>
+              <div class="toast-sub">Sarah M. accepted your request for lemons</div>
+            </div>
+            <div class="toast-close" role="button" aria-label="Dismiss notification" tabindex="0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Skeleton Loading -->
+    <div class="label-overline">Skeleton Loading States</div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
+      <div class="skeleton-card" aria-busy="true" aria-label="Loading meal card">
+        <div class="skeleton skeleton-image"></div>
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text-short"></div>
+      </div>
+      <div class="skeleton-card" aria-busy="true" aria-label="Loading ingredient card">
+        <div style="display: flex; gap: var(--space-4); align-items: center)">
+          <div class="skeleton" style="width: 52px; height: 52px; border-radius: var(--radius-xl); flex-shrink: 0;"></div>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: var(--space-2);">
+            <div class="skeleton skeleton-title" style="width: 60%"></div>
+            <div class="skeleton skeleton-text-short" style="width: 40%"></div>
+          </div>
+        </div>
+        <div class="skeleton skeleton-text" style="margin-top: var(--space-3)"></div>
+        <div class="skeleton skeleton-text-short"></div>
+      </div>
+
+      <!-- Empty State -->
+      <div style="display: flex; justify-content: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--card-radius)">
+        <div class="empty-state">
+          <img
+            class="empty-state-image"
+            src="./assets/pantry_empty_state_1781548315286.png"
+            alt="Empty refrigerator illustration — add your first item"
+            loading="lazy"
+          >
+          <h3 class="empty-state-title">Your pantry is empty</h3>
+          <p class="empty-state-desc">Scan your fridge or kitchen to automatically detect and track everything. It only takes 30 seconds.</p>
+          <button class="fos-btn btn-primary btn-md" id="btn-first-scan">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Scan My Kitchen
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AI COMPONENTS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="ai" aria-labelledby="ai-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">✦ AI</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="ai-heading">AI Components</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        The AI assistant isn't isolated in a chat screen. It's woven throughout the interface. 
+        Sky and Plum create a distinct AI visual language that's intelligent but warm — never cold or robotic.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
+      <!-- AI Suggestion Card -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group ai-card" aria-label="AI meal suggestion">
+        <div class="ai-card-header">
+          <div class="ai-avatar" aria-hidden="true">✦</div>
+          <div>
+            <div class="ai-label">AI Suggestion</div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">Based on your pantry</div>
+          </div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-message">
+            Your spinach expires <strong>tomorrow</strong>. You also have eggs, parmesan, and garlic. You could make a quick <strong>spinach frittata</strong> — it takes 15 minutes and uses all 4 items. Want me to generate the recipe?
+          </p>
+          <div class="ai-prompt-chips" role="group" aria-label="Suggested responses">
+            <button class="prompt-chip" id="chip-yes-recipe">Yes, show recipe →</button>
+            <button class="prompt-chip" id="chip-other-ideas">Other ideas</button>
+            <button class="prompt-chip" id="chip-skip">Skip for now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- AI Meal Planning -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group ai-card" aria-label="AI weekly meal plan suggestion">
+        <div class="ai-card-header">
+          <div class="ai-avatar" aria-hidden="true" style="background: hsla(198,72%,50%,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-sky-600);"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <div class="ai-label">Weekly Meal Plan</div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">Generated from 24 pantry items</div>
+          </div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-message">
+            I've planned <strong>5 meals for this week</strong> using your current pantry. This uses 89% of your ingredients and prevents all 3 expiring items from going to waste.
+          </p>
+          <div class="ai-prompt-chips" role="group" aria-label="Suggested responses">
+            <button class="prompt-chip" id="chip-view-plan">View meal plan</button>
+            <button class="prompt-chip" id="chip-adjust-plan">Adjust preferences</button>
+            <button class="prompt-chip" id="chip-share-plan">Share with household</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- AI Voice State -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--space-10); gap: var(--space-6); min-height: 240px; background: linear-gradient(145deg, var(--color-bg-elevated), var(--brand-sky-50));" aria-label="AI voice interaction state">
+        <div style="position: relative; width: 80px; height: 80px;">
+          <div style="
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-sky-400), var(--brand-plum-400));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 0 0 12px hsla(198,72%,50%,0.12), 0 0 0 24px hsla(198,72%,50%,0.06);
+            animation: voicePulse 2s ease-in-out infinite;
+          " role="img" aria-label="AI assistant listening">✦</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: var(--text-base); font-weight: var(--weight-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1)">Listening...</div>
+          <div style="font-size: var(--text-sm); color: var(--color-text-tertiary)">"What can I make with spinach tonight?"</div>
+        </div>
+        <div style="display: flex; gap: var(--space-1);" aria-hidden="true">
+          <div class="voice-bar" style="width:4px; height: 16px; border-radius: 2px; background: var(--brand-sky-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0s;"></div>
+          <div class="voice-bar" style="width:4px; height: 28px; border-radius: 2px; background: var(--brand-sky-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.1s;"></div>
+          <div class="voice-bar" style="width:4px; height: 20px; border-radius: 2px; background: var(--brand-plum-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.2s;"></div>
+          <div class="voice-bar" style="width:4px; height: 36px; border-radius: 2px; background: var(--brand-plum-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.15s;"></div>
+          <div class="voice-bar" style="width:4px; height: 24px; border-radius: 2px; background: var(--brand-sky-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.05s;"></div>
+          <div class="voice-bar" style="width:4px; height: 32px; border-radius: 2px; background: var(--brand-plum-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.25s;"></div>
+          <div class="voice-bar" style="width:4px; height: 18px; border-radius: 2px; background: var(--brand-sky-400); animation: voiceBar 0.8s ease-in-out infinite; animation-delay: 0.3s;"></div>
+        </div>
+      </article>
+
+      <!-- AI Shopping Guidance -->
+      <article class="bg-card-bg border border-card-border rounded-card shadow-card overflow-hidden transition-all duration-moderate ease-spring cursor-pointer hover:-translate-y-1 hover:shadow-card-hover group ai-card" aria-label="AI shopping guidance">
+        <div class="ai-card-header">
+          <div class="ai-avatar" aria-hidden="true" style="background: hsla(198,72%,50%,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-sky-600);"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <div>
+            <div class="ai-label">Shopping Insight</div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">Smart replenishment</div>
+          </div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-message">
+            You'll run out of <strong>olive oil, garlic, and eggs</strong> within a week. Adding these to your next shop will cover all 5 planned meals. Estimated cost: <strong>~$12</strong>.
+          </p>
+          <div class="ai-prompt-chips" role="group" aria-label="Suggested responses">
+            <button class="prompt-chip" id="chip-add-to-list">Add to shopping list</button>
+            <button class="prompt-chip" id="chip-see-alternatives">See alternatives</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+  </section>
+
+  <!-- ============================================================
+       ICONOGRAPHY
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="icons" aria-labelledby="icons-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⊙ Icons</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="icons-heading">Iconography System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Icons must be clear, consistent, and accessible. All interactive icons include text labels or aria-labels.
+        Minimum size: 20px. Touch targets: 44×44px minimum.
+      </p>
+    </div>
+
+    <div class="label-overline">Navigation Icons</div>
+    <div class="icon-grid" role="list">
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><div class="icon-name">Home</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4.5-7 13-7 13S5 13.5 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div class="icon-name">Pantry</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><div class="icon-name">Scan</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M6 20V10M18 20V10"/><path d="M6 10a6 6 0 0 1 12 0"/></svg></div><div class="icon-name">Meals</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="9" r="3"/><path d="M2 21v-1a7 7 0 0 1 14 0v1"/><path d="M17 12a5 5 0 0 1 5 5v1"/></svg></div><div class="icon-name">Community</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="icon-name">Profile</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><div class="icon-name">Settings</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="icon-name">Search</div></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label-overline">Food Category Icons</div>
+    <div class="icon-grid" role="list">
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg></div><div class="icon-name">Produce</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16c.5-1.5 1-3 1-4.5A5.5 5.5 0 0 0 11.5 6a7.5 7.5 0 0 0-6 3c-1.5 2-1 5.5.5 7s4.5 1.5 6 .5c1.5-1 2.5-.5 4 1z"/><circle cx="9" cy="11" r="1"/></svg></div><div class="icon-name">Meat</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12c-2.5 3-7 4-10 2s-4.5-3.5-7-2c1-1.5 1-3.5 0-5 2.5 1.5 4 0 7-2 3-2 7.5-1 10 2Z"/><path d="M2 12c0-2-1-3-2-3v6c1 0 2-1 2-3Z"/><circle cx="18" cy="10" r="1"/></svg></div><div class="icon-name">Seafood</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h12V10L14 6H10L6 10z"/><path d="M6 12h12"/><circle cx="12" cy="15" r="1"/></svg></div><div class="icon-name">Dairy</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7.5 2 4 7 4 12c0 5 3.5 10 8 10s8-5 8-10c0-5-3.5-10-8-10Z"/><path d="M12 6c-1.5 0-3 1.5-3 4"/></svg></div><div class="icon-name">Eggs</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 10a2 2 0 0 0-2 2v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6a2 2 0 0 0-2-2M5 10h14"/></svg></div><div class="icon-name">Pantry</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg></div><div class="icon-name">Frozen</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-3.25 3.5-5.5 7.5-6.5a14 14 0 0 1 12.5-3.5c-.25-4.5-3-9.25-7.5-10.25a13.5 13.5 0 0 0-10.5 4c-.75 2.5-.5 7 1.5 9.5a11 11 0 0 0-3.5 6.75z"/><path d="M12 12v-4"/></svg></div><div class="icon-name">Herbs</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><ellipse cx="12" cy="6" rx="7" ry="2"/><ellipse cx="12" cy="18" rx="7" ry="2"/></svg></div><div class="icon-name">Canned</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4 4 4 8c0 4 2 6 2 10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2c0-4 2-6 2-10 0-4-4-6-8-6Z"/><path d="M8 10V6M16 10V6M12 12V4"/></svg></div><div class="icon-name">Bakery</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="6" ry="9"/><circle cx="12" cy="8" r="1.5"/></svg></div><div class="icon-name">Condiments</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H6M6 2v7c0 3 2.5 5.5 5.5 5.5h1C15.5 14.5 18 12 18 9V2zM12 14.5V22"/></svg></div><div class="icon-name">Beverages</div></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label-overline">Action Icons</div>
+    <div class="icon-grid" role="list">
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="icon-name">AI / Smart</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="icon-name">Expiry</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="icon-name">Nutrition</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><div class="icon-name">Shopping</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div class="icon-name">Recipe</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><div class="icon-name">Favorite</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg></div><div class="icon-name">Share</div></div>
+      <div class="icon-item" role="listitem"><div class="icon-glyph" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="icon-name">Add</div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DATA VISUALIZATION
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="dataviz" aria-labelledby="dataviz-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">⊞ Data Viz</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="dataviz-heading">Data Visualization</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Information that tells a story, not a spreadsheet. Nutrition, expiry, and inventory data should be scannable in under 3 seconds.
+      </p>
+    </div>
+
+    <div class="viz-grid">
+      <!-- Expiry Risk Chart -->
+      <div class="viz-card" aria-label="Expiry risk breakdown by category">
+        <div class="viz-card-title">Expiry Risk Overview</div>
+        <div class="expiry-risk-chart" role="list">
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Expired</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 8%; background: var(--expiry-expired)" aria-label="1 item expired"></div></div>
+            <div class="expiry-risk-count">1</div>
+          </div>
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Urgent</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 16%; background: var(--expiry-urgent)" aria-label="2 items urgent"></div></div>
+            <div class="expiry-risk-count">2</div>
+          </div>
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Use Soon</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 24%; background: var(--expiry-soon)" aria-label="3 items use soon"></div></div>
+            <div class="expiry-risk-count">3</div>
+          </div>
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Watch Out</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 32%; background: var(--expiry-watchout)" aria-label="4 items watch out"></div></div>
+            <div class="expiry-risk-count">4</div>
+          </div>
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Good</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 58%; background: var(--expiry-good)" aria-label="7 items good"></div></div>
+            <div class="expiry-risk-count">7</div>
+          </div>
+          <div class="expiry-risk-row" role="listitem">
+            <div class="expiry-risk-label">Fresh</div>
+            <div class="expiry-risk-bar-wrap"><div class="expiry-risk-bar" style="width: 56%; background: var(--expiry-fresh)" aria-label="7 items fresh"></div></div>
+            <div class="expiry-risk-count">7</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekly Food Waste Trend -->
+      <div class="viz-card" aria-label="Weekly food waste prevented trend">
+        <div class="viz-card-title">Waste Prevented This Week</div>
+        <div class="weekly-trend" role="img" aria-label="Bar chart showing food waste prevented daily: Mon 60%, Tue 40%, Wed 75%, Thu 30%, Fri 90%, Sat 50%, Sun 65%">
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 60%; background: linear-gradient(0deg, var(--brand-sage-400), var(--brand-sage-300))"></div>
+            <div class="trend-bar-label">Mon</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 40%; background: linear-gradient(0deg, var(--brand-sage-400), var(--brand-sage-300))"></div>
+            <div class="trend-bar-label">Tue</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 75%; background: linear-gradient(0deg, var(--brand-zest-400), var(--brand-zest-300))"></div>
+            <div class="trend-bar-label">Wed</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 30%; background: linear-gradient(0deg, var(--brand-sage-400), var(--brand-sage-300))"></div>
+            <div class="trend-bar-label">Thu</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 95%; background: linear-gradient(0deg, var(--brand-zest-500), var(--brand-zest-400))"></div>
+            <div class="trend-bar-label">Fri</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 50%; background: linear-gradient(0deg, var(--brand-sage-400), var(--brand-sage-300))"></div>
+            <div class="trend-bar-label">Sat</div>
+          </div>
+          <div class="trend-bar-wrap">
+            <div class="trend-bar" style="height: 65%; background: linear-gradient(0deg, var(--brand-zest-400), var(--brand-zest-300))"></div>
+            <div class="trend-bar-label">Sun</div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: var(--space-4)">
+          <div style="font-size: var(--text-2xl); font-weight: var(--weight-extrabold); color: var(--color-brand)">$18.40</div>
+          <div style="text-align: right">
+            <div style="font-size: var(--text-xs); color: var(--color-success); font-weight: var(--weight-semibold)">↑ 23% vs last week</div>
+            <div style="font-size: 10px; color: var(--color-text-tertiary)">food waste saved</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Health Rings -->
+      <div class="viz-card" aria-label="Inventory health by category">
+        <div class="viz-card-title">Pantry Health</div>
+        <div class="inventory-health" role="list" aria-label="Inventory health by category rings">
+          <div class="inv-health-item" role="listitem">
+            <svg class="inv-health-ring" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--color-border)" stroke-width="5"/>
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--brand-sage-400)" stroke-width="5" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="28" transform="rotate(-90 26 26)"/>
+              <text x="26" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="var(--color-text-primary)">80%</text>
+            </svg>
+            <div class="inv-health-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/><path d="M9 22v-4"/></svg>
+              Produce
+            </div>
+          </div>
+          <div class="inv-health-item" role="listitem">
+            <svg class="inv-health-ring" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--color-border)" stroke-width="5"/>
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--nutrition-protein)" stroke-width="5" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="55" transform="rotate(-90 26 26)"/>
+              <text x="26" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="var(--color-text-primary)">60%</text>
+            </svg>
+            <div class="inv-health-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16c.5-1.5 1-3 1-4.5A5.5 5.5 0 0 0 11.5 6a7.5 7.5 0 0 0-6 3c-1.5 2-1 5.5.5 7s4.5 1.5 6 .5c1.5-1 2.5-.5 4 1z"/><circle cx="9" cy="11" r="1"/></svg>
+              Protein
+            </div>
+          </div>
+          <div class="inv-health-item" role="listitem">
+            <svg class="inv-health-ring" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--color-border)" stroke-width="5"/>
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--brand-sky-400)" stroke-width="5" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="83" transform="rotate(-90 26 26)"/>
+              <text x="26" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="var(--color-text-primary)">40%</text>
+            </svg>
+            <div class="inv-health-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h12V10L14 6H10L6 10z"/><path d="M6 12h12"/><circle cx="12" cy="15" r="1"/></svg>
+              Dairy
+            </div>
+          </div>
+          <div class="inv-health-item" role="listitem">
+            <svg class="inv-health-ring" viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--color-border)" stroke-width="5"/>
+              <circle cx="26" cy="26" r="22" fill="none" stroke="var(--brand-plum-400)" stroke-width="5" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="14" transform="rotate(-90 26 26)"/>
+              <text x="26" y="30" text-anchor="middle" font-size="10" font-weight="700" fill="var(--color-text-primary)">90%</text>
+            </svg>
+            <div class="inv-health-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M5 10a2 2 0 0 0-2 2v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6a2 2 0 0 0-2-2M5 10h14"/></svg>
+              Pantry
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Impact -->
+      <div class="viz-card" aria-label="Community food exchange impact">
+        <div class="viz-card-title">Community Impact</div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4)">
+          <div style="display: flex; align-items: center; gap: var(--space-4)">
+            <div style="width: 52px; height: 52px; background: var(--brand-sage-100); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; flex-shrink: 0;" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-sage-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M12 12V3"/><path d="M8 8V4M16 8V4"/></svg>
+            </div>
+            <div>
+              <div style="font-size: var(--text-2xl); font-weight: var(--weight-extrabold); color: var(--color-brand)">47 kg</div>
+              <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">food waste prevented with neighbours</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-4)">
+            <div style="width: 52px; height: 52px; background: var(--brand-plum-100); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; flex-shrink: 0;" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-plum-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div style="font-size: var(--text-2xl); font-weight: var(--weight-extrabold); color: var(--brand-plum-500)">12</div>
+              <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">successful exchanges this month</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-4)">
+            <div style="width: 52px; height: 52px; background: var(--brand-sky-100); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; flex-shrink: 0;" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-sky-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div>
+              <div style="font-size: var(--text-2xl); font-weight: var(--weight-extrabold); color: var(--brand-sky-500)">94 kg</div>
+              <div style="font-size: var(--text-xs); color: var(--color-text-tertiary)">CO₂ emissions saved this year</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ILLUSTRATIONS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="illustrations" aria-labelledby="illustrations-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">□ Illustrations</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="illustrations-heading">Illustration System</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Editorial-quality illustrations that feel part of the same brand as food photography. 
+        Warm, geometric, optimistic, and human — never corporate or generic.
+      </p>
+    </div>
+
+    <div class="illustration-grid">
+      <div class="illustration-card">
+        <img class="illustration-image" src="./assets/hero_food_illustration_1781548296048.png" alt="Kitchen scene with fresh ingredients arranged top-down — hero illustration" loading="lazy">
+        <div class="illustration-info">
+          <div class="illustration-name">Kitchen Hero</div>
+          <div class="illustration-use">Home screen · Onboarding</div>
+        </div>
+      </div>
+      <div class="illustration-card">
+        <img class="illustration-image" src="./assets/pantry_empty_state_1781548315286.png" alt="Empty refrigerator illustration — warm coral and cream palette" loading="lazy">
+        <div class="illustration-info">
+          <div class="illustration-name">Empty Pantry</div>
+          <div class="illustration-use">Empty state · First-time user</div>
+        </div>
+      </div>
+      <div class="illustration-card">
+        <img class="illustration-image" src="./assets/ai_assistant_illustration_1781548350865.png" alt="Abstract AI assistant illustration with warm geometric orbs" loading="lazy">
+        <div class="illustration-info">
+          <div class="illustration-name">AI Companion</div>
+          <div class="illustration-use">AI onboarding · Voice screen</div>
+        </div>
+      </div>
+      <div class="illustration-card">
+        <img class="illustration-image" src="./assets/community_illustration_1781548363261.png" alt="Neighbours sharing food in a warm community setting" loading="lazy">
+        <div class="illustration-info">
+          <div class="illustration-name">Community</div>
+          <div class="illustration-use">Exchange · Community tab</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Illustration Guidelines -->
+    <div class="label-overline">Illustration Guidelines</div>
+    <div class="three-col">
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-zest-100)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-zest-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.63-.77 1.63-1.7 0-.42-.16-.82-.44-1.16-.3-.37-.47-.86-.47-1.39 0-1 1.05-1.75 2.1-1.75H17c3 0 5-2.25 5-5 0-5.5-4.5-10-10-10z"/></svg>
+        </div>
+        <div class="principle-title">Color Harmony</div>
+        <p class="principle-desc">Illustrations use the same 5 brand families. Cream backgrounds. Zest + Coral + Sage as primary shapes. Never introduce colors outside the brand palette.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-sage-100)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-sage-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        </div>
+        <div class="principle-title">Strong Shapes</div>
+        <p class="principle-desc">Rounded, geometric forms. Bold silhouettes with high contrast. Minimal detail. Illustrations must be legible at 80×80px thumbnail size.</p>
+      </div>
+      <div class="principle-card">
+        <div class="principle-icon" style="background: var(--brand-sky-100)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-sky-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </div>
+        <div class="principle-title">Warm Optimism</div>
+        <p class="principle-desc">Every illustration should evoke a positive emotional response. Warm light, friendly characters, clear narrative. Never clinical or neutral.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MOTION SYSTEM
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="motion" aria-labelledby="motion-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">◌ Motion</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="motion-heading">Motion Principles</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Motion must feel purposeful, not decorative. Every transition serves navigation clarity, attention direction, or emotional response.
+        Hover each block to feel the difference between easing curves.
+      </p>
+    </div>
+
+    <div class="motion-demos" role="list">
+      <div class="motion-demo" role="listitem" aria-label="Spring easing demonstration">
+        <div class="motion-demo-dot spring" style="background: linear-gradient(135deg, var(--brand-zest-400), var(--brand-zest-600))"></div>
+        <div class="motion-label">Spring Scale</div>
+        <div class="motion-token">ease-spring</div>
+      </div>
+      <div class="motion-demo" role="listitem" aria-label="Bounce easing demonstration">
+        <div class="motion-demo-dot bounce" style="background: linear-gradient(135deg, var(--brand-sage-400), var(--brand-sage-600))"></div>
+        <div class="motion-label">Bounce Lift</div>
+        <div class="motion-token">ease-bounce</div>
+      </div>
+      <div class="motion-demo" role="listitem" aria-label="Decelerate easing demonstration">
+        <div class="motion-demo-dot decelerate" style="background: linear-gradient(135deg, var(--brand-sky-400), var(--brand-plum-400))"></div>
+        <div class="motion-label">Decelerate Entry</div>
+        <div class="motion-token">ease-decelerate</div>
+      </div>
+      <div class="motion-demo" role="listitem" aria-label="Pulse animation demonstration">
+        <div class="motion-demo-dot pulse" style="background: linear-gradient(135deg, var(--brand-coral-400), var(--brand-zest-400))"></div>
+        <div class="motion-label">Pulse (AI State)</div>
+        <div class="motion-token">ease-standard</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Duration Tokens -->
+    <div class="label-overline">Duration Tokens</div>
+    <div class="table-wrap">
+      <table class="token-table" aria-label="Motion duration tokens">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Value</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>--duration-instant</td><td>50ms</td><td>Immediate state toggles, switch flips</td></tr>
+          <tr><td>--duration-fast</td><td>100ms</td><td>Hover states, icon transforms</td></tr>
+          <tr><td>--duration-normal</td><td>200ms</td><td>Button presses, small component transitions</td></tr>
+          <tr><td>--duration-moderate</td><td>300ms</td><td>Card hover lifts, tab switching</td></tr>
+          <tr><td>--duration-slow</td><td>400ms</td><td>Progress bars, macro fill animations</td></tr>
+          <tr><td>--duration-deliberate</td><td>600ms</td><td>Modal entry, bottom sheet slide-up</td></tr>
+          <tr><td>--duration-cinematic</td><td>800ms</td><td>Progress ring draw, success celebration</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DESIGN TOKENS
+       ============================================================ -->
+  <section class="py-16 px-10 border-b border-border-subtle max-w-[1200px]" id="tokens" aria-labelledby="tokens-heading">
+    <div class="mb-10">
+      <div class="inline-flex items-center gap-2 bg-brand-light text-brand text-xs font-bold tracking-wider uppercase py-1 px-3 rounded-pill mb-3">{} Tokens</div>
+      <h2 class="text-4xl font-extrabold tracking-tight text-text-primary leading-tight mb-4" id="tokens-heading">Design Token Architecture</h2>
+      <p class="text-lg text-text-secondary leading-relaxed max-w-[640px]">
+        Three-tier token system: Raw values → Brand tokens → Semantic tokens. 
+        Engineers consume only semantic tokens, never raw values.
+      </p>
+    </div>
+
+    <!-- Token Hierarchy -->
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--card-radius); padding: var(--space-8); margin-bottom: var(--space-8); box-shadow: var(--card-shadow)">
+      <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap">
+        <div style="background: var(--brand-zest-100); color: var(--brand-zest-700); padding: var(--space-3) var(--space-5); border-radius: var(--radius-xl); font-weight: var(--weight-bold); font-size: var(--text-sm);">
+          Layer 1: Raw Values<br><span style="font-size: 10px; opacity: 0.7">hsl(33, 93%, 50%)</span>
+        </div>
+        <div style="font-size: 20px; color: var(--color-text-tertiary)">→</div>
+        <div style="background: var(--brand-sage-100); color: var(--brand-sage-700); padding: var(--space-3) var(--space-5); border-radius: var(--radius-xl); font-weight: var(--weight-bold); font-size: var(--text-sm);">
+          Layer 2: Brand Tokens<br><span style="font-size: 10px; opacity: 0.7">--brand-zest-500</span>
+        </div>
+        <div style="font-size: 20px; color: var(--color-text-tertiary)">→</div>
+        <div style="background: var(--brand-sky-100); color: var(--brand-sky-600); padding: var(--space-3) var(--space-5); border-radius: var(--radius-xl); font-weight: var(--weight-bold); font-size: var(--text-sm);">
+          Layer 3: Semantic Tokens<br><span style="font-size: 10px; opacity: 0.7">--color-brand</span>
+        </div>
+        <div style="font-size: 20px; color: var(--color-text-tertiary)">→</div>
+        <div style="background: var(--brand-plum-100); color: var(--brand-plum-600); padding: var(--space-3) var(--space-5); border-radius: var(--radius-xl); font-weight: var(--weight-bold); font-size: var(--text-sm);">
+          Implementation<br><span style="font-size: 10px; opacity: 0.7">background: var(--color-brand)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Semantic Color Tokens Table -->
+    <div class="label-overline">Core Semantic Color Tokens</div>
+    <div class="table-wrap" style="margin-bottom: var(--space-6)">
+      <table class="token-table" aria-label="Core semantic color tokens">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th style="width: 48px">Color</th>
+            <th>Light Value</th>
+            <th>Dark Value</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>--color-brand</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-brand)"></span></td>
+            <td>brand-zest-500</td>
+            <td>brand-zest-400</td>
+            <td>Primary CTAs, active states, brand moments</td>
+          </tr>
+          <tr>
+            <td>--color-bg-base</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-bg-base)"></span></td>
+            <td>hsl(38,60%,99%)</td>
+            <td>hsl(30,8%,9%)</td>
+            <td>App background</td>
+          </tr>
+          <tr>
+            <td>--color-bg-elevated</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-bg-elevated)"></span></td>
+            <td>hsl(0,0%,100%)</td>
+            <td>hsl(30,7%,13%)</td>
+            <td>Cards, nav, elevated surfaces</td>
+          </tr>
+          <tr>
+            <td>--color-text-primary</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-text-primary)"></span></td>
+            <td>hsl(38,8%,10%)</td>
+            <td>hsl(38,20%,95%)</td>
+            <td>Headings, primary labels, critical text</td>
+          </tr>
+          <tr>
+            <td>--color-text-secondary</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-text-secondary)"></span></td>
+            <td>hsl(38,8%,32%)</td>
+            <td>hsl(38,12%,72%)</td>
+            <td>Body copy, supporting information</td>
+          </tr>
+          <tr>
+            <td>--color-text-tertiary</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-text-tertiary)"></span></td>
+            <td>hsl(38,8%,52%)</td>
+            <td>hsl(38,8%,50%)</td>
+            <td>Captions, placeholders, metadata</td>
+          </tr>
+          <tr>
+            <td>--color-ai-primary</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-ai-primary)"></span></td>
+            <td>hsl(198,72%,40%)</td>
+            <td>hsl(198,80%,58%)</td>
+            <td>AI features, suggestions, voice states</td>
+          </tr>
+          <tr>
+            <td>--color-success</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-success)"></span></td>
+            <td>hsl(147,50%,38%)</td>
+            <td>hsl(147,60%,48%)</td>
+            <td>Positive feedback, fresh items, good health</td>
+          </tr>
+          <tr>
+            <td>--color-warning</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-warning)"></span></td>
+            <td>hsl(40,95%,44%)</td>
+            <td>hsl(48,100%,52%)</td>
+            <td>Watch-out expiry, nutritional gaps</td>
+          </tr>
+          <tr>
+            <td>--color-error</td>
+            <td><span class="token- flex flex-col items-center gap-2" style="background: var(--color-error)"></span></td>
+            <td>hsl(0,72%,48%)</td>
+            <td>hsl(0,72%,58%)</td>
+            <td>Expired items, critical errors, urgent alerts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- File Structure -->
+    <div class="label-overline">Design System File Structure</div>
+    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--card-radius); padding: var(--space-6); font-family: var(--font-family-mono); font-size: var(--text-sm); line-height: var(--leading-relaxed); box-shadow: var(--card-shadow)">
+      <div style="color: var(--color-brand); font-weight: var(--weight-bold)">household-food-os/</div>
+      <div style="color: var(--color-text-secondary); margin-left: var(--space-4)">design-system/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">tokens.css <span style="color: var(--color-text-tertiary); font-style: italic; font-size: 11px">// All design tokens (this file)</span></div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">tokens.json <span style="color: var(--color-text-tertiary); font-style: italic; font-size: 11px">// JSON for design tool sync</span></div>
+      <div style="color: var(--color-text-secondary); margin-left: var(--space-4)">components/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">cards/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">navigation/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">inputs/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">feedback/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">ai/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">dataviz/</div>
+      <div style="color: var(--color-text-secondary); margin-left: var(--space-4)">illustrations/</div>
+      <div style="color: var(--color-text-secondary); margin-left: var(--space-4)">icons/</div>
+      <div style="color: var(--color-text-secondary); margin-left: var(--space-4)">guidelines/</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">motion.md</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">photography.md</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">illustration.md</div>
+      <div style="color: var(--color-text-tertiary); margin-left: var(--space-8)">accessibility.md</div>
+      <div style="color: var(--brand-sage-500); margin-left: var(--space-4)">index.html <span style="color: var(--color-text-tertiary); font-style: italic; font-size: 11px">// This living design system</span></div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <div style="padding: var(--space-12) var(--space-10); border-top: 1px solid var(--color-border-subtle); background: var(--color-bg-sunken)">
+    <div style="max-width: 1200px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap;">
+      <div>
+        <div style="font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-1)">Household Food OS</div>
+        <div style="font-size: var(--text-sm); color: var(--color-text-tertiary)">Design System v1.0 · WCAG 2.2 AA · 8pt Grid · Plus Jakarta Sans</div>
+      </div>
+      <div style="display: flex; gap: var(--space-4)">
+        <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sage-100 text-brand-sage-700 dark:bg-[hsla(147,32%,48%,0.18)] dark:text-brand-sage-300">✓ WCAG AA</span>
+        <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-sky-100 text-brand-sky-600 dark:bg-[hsla(198,72%,50%,0.18)] dark:text-brand-sky-200">✦ AI-First</span>
+        <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-zest-100 text-brand-zest-700 dark:bg-[hsla(33,93%,50%,0.18)] dark:text-brand-zest-300">⊞ 8pt Grid</span>
+        <span class="inline-flex items-center gap-1 py-[3px] px-2 rounded-pill text-[11px] font-semibold tracking-wide bg-brand-plum-100 text-brand-plum-600 dark:bg-[hsla(270,44%,55%,0.18)] dark:text-brand-plum-300">◉ Dark Mode</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // ============================================================
+  // DESIGN SYSTEM INTERACTIONS
+  // ============================================================
+
+  // Theme Switcher
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    document.getElementById('btn-light').classList.toggle('active', theme === 'light');
+    document.getElementById('btn-light').setAttribute('aria-pressed', theme === 'light');
+    document.getElementById('btn-dark').classList.toggle('active', theme === 'dark');
+    document.getElementById('btn-dark').setAttribute('aria-pressed', theme === 'dark');
+  }
+
+  // Nav Active State
+  function setActive(el) {
+    document.querySelectorAll('.ds-nav-item').forEach(item => item.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  // Filter Tags Toggle
+  document.querySelectorAll('.filter-tag').forEach(tag => {
+    tag.addEventListener('click', function() {
+      document.querySelectorAll('.filter-tag').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-pressed', 'false');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-pressed', 'true');
+    });
+  });
+
+  // Segmented Controls
+  document.querySelectorAll('.segmented-control').forEach(control => {
+    control.querySelectorAll('.seg-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        control.querySelectorAll('.seg-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+      });
+    });
+  });
+
+  // Tab Bar
+  document.querySelectorAll('.tab-bar').forEach(tabBar => {
+    tabBar.querySelectorAll('.tab-item').forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabBar.querySelectorAll('.tab-item').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+        this.setAttribute('tabindex', '0');
+      });
+    });
+  });
+
+  // Bottom Nav
+  document.querySelectorAll('.bottom-nav-item').forEach(item => {
+    item.addEventListener('click', function() {
+      document.querySelectorAll('.bottom-nav-item').forEach(i => {
+        i.classList.remove('active');
+        i.removeAttribute('aria-current');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-current', 'page');
+    });
+  });
+
+  // Toast dismiss
+  document.querySelectorAll('.toast-close').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.closest('.fos-toast').style.transition = 'all 0.3s ease';
+      this.closest('.fos-toast').style.opacity = '0';
+      this.closest('.fos-toast').style.transform = 'translateX(20px)';
+      setTimeout(() => this.closest('.fos-toast').remove(), 300);
+    });
+  });
+
+  // Smooth scroll navigation
+  document.querySelectorAll('.ds-nav-item').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Animate progress bars on scroll
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.expiry-progress-fill, .macro-bar-fill').forEach(bar => {
+          const width = bar.style.width;
+          bar.style.width = '0%';
+          requestAnimationFrame(() => {
+            setTimeout(() => { bar.style.width = width; }, 100);
+          });
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fos-card, .viz-card').forEach(card => {
+    progressObserver.observe(card);
+  });
+
+  // Detect system preference on load
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // Default to light for design system, override if needed
+  }
+
+  // Keyboard accessibility for nav FAB
+  document.querySelector('.nav-fab')?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
+
+  console.log('%c🥗 Household Food OS — Design System v1.0', 
+    'color: hsl(33,93%,50%); font-size: 16px; font-weight: 800; font-family: system-ui;'
+  );
+  console.log('%cTokens: 120+ | Themes: Light + Dark | Grid: 8pt | WCAG: AA', 
+    'color: hsl(147,32%,38%); font-size: 12px;'
+  );
+</script>
+
+</body>
+</html>
