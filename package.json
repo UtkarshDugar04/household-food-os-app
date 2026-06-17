@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UtkarshDugar04/figma-makeathon-design-system.git"
+    "url": "git+https://github.com/UtkarshDugar04/household-food-os-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/UtkarshDugar04/figma-makeathon-design-system/issues"
+    "url": "https://github.com/UtkarshDugar04/household-food-os-app/issues"
   },
-  "homepage": "https://github.com/UtkarshDugar04/figma-makeathon-design-system#readme",
+  "homepage": "https://github.com/UtkarshDugar04/household-food-os-app#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.9.3",
