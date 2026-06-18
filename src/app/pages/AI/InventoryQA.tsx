@@ -27,7 +27,7 @@ export default function InventoryQA() {
       </div>
 
       <div className="z-10 bg-bg-base/90 backdrop-blur-md border-b border-border-subtle">
-        <PageHeader title="Pantry Q&A" subtitle="Ask AI about your inventory" backRoute="" />
+        <PageHeader title="Pantry Q&A" subtitle="Ask AI about your inventory" backRoute="/home" />
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 py-6 z-10 flex flex-col gap-6">
@@ -69,7 +69,7 @@ export default function InventoryQA() {
             value={input}
             onChange={e => setInput(e.target.value)}
             placeholder="Ask about your pantry..."
-            className="flex-1 bg-bg-sunken border border-border-subtle rounded-full px-5 py-3.5 text-sm font-medium focus:outline-none focus:border-brand-muted transition-colors"
+            className="flex-1 bg-bg-sunken border border-border-subtle rounded-xl px-5 py-3.5 text-sm font-medium focus:outline-none focus:border-brand-muted transition-colors"
             onKeyDown={e => e.key === 'Enter' && sendMsg()}
           />
           <button onClick={sendMsg} className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center hover:bg-brand-hover transition-colors shadow-md flex-shrink-0">

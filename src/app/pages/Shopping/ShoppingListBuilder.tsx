@@ -26,7 +26,7 @@ export default function ShoppingListBuilder() {
       <PageHeader
         title="Shopping List"
         subtitle={`${shoppingList.length} items · est. ₹${totalEstimate}`}
-        backRoute=""
+        backRoute="/shopping/restock"
         rightElement={
           <button onClick={() => navigate('/shopping/compare')} className="text-xs font-bold text-brand hover:underline">
             Compare Stores
@@ -42,8 +42,8 @@ export default function ShoppingListBuilder() {
               <span className="text-xs font-bold text-text-secondary">{checked.size} of {shoppingList.length} checked</span>
               <span className="text-xs font-bold text-brand">₹{checkedTotal} / ₹{totalEstimate}</span>
             </div>
-            <div className="w-full h-2 bg-bg-sunken rounded-pill overflow-hidden">
-              <div className="h-full bg-brand rounded-pill transition-all duration-slow" style={{ width: `${(checked.size / shoppingList.length) * 100}%` }} />
+            <div className="w-full h-2 bg-bg-sunken rounded-md overflow-hidden">
+              <div className="h-full bg-brand rounded-md transition-all duration-slow" style={{ width: `${(checked.size / shoppingList.length) * 100}%` }} />
             </div>
           </div>
         </div>

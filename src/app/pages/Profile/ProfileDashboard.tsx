@@ -11,12 +11,12 @@ export default function ProfileDashboard() {
   const navigate = useNavigate();
 
   const menuItems = [
-    { icon: Users, label: 'Household Profile', sub: '3 members', route: '/profile/household', color: 'text-brand' },
-    { icon: Utensils, label: 'Dietary Preferences', sub: 'Flexitarian, No pork', route: '/profile/dietary', color: 'text-brand-sage-600' },
-    { icon: TrendingUp, label: 'Nutrition Goals', sub: '120g protein/day', route: '/profile/goals', color: 'text-brand-sky-600' },
-    { icon: ShoppingBag, label: 'Shopping Preferences', sub: 'BigBasket, Zepto', route: '/profile/shopping', color: 'text-brand-coral-600' },
-    { icon: Bell, label: 'Notifications', sub: '4 unread', route: '/notifications', color: 'text-warning' },
-    { icon: Moon, label: 'Settings', sub: 'Theme, data, privacy', route: '/profile/settings', color: 'text-text-secondary' },
+    { icon: Users, label: 'Household Profile', sub: '3 members', route: '/profile/household', color: 'text-text-primary' },
+    { icon: Utensils, label: 'Dietary Preferences', sub: 'Flexitarian, No pork', route: '/profile/dietary', color: 'text-text-primary' },
+    { icon: TrendingUp, label: 'Nutrition Goals', sub: '120g protein/day', route: '/profile/goals', color: 'text-text-primary' },
+    { icon: ShoppingBag, label: 'Shopping Preferences', sub: 'BigBasket, Zepto', route: '/profile/shopping', color: 'text-text-primary' },
+    { icon: Bell, label: 'Notifications', sub: '4 unread', route: '/notifications', color: 'text-text-primary' },
+    { icon: Moon, label: 'Settings', sub: 'Theme, data, privacy', route: '/profile/settings', color: 'text-text-primary' },
   ];
 
   return (
@@ -34,29 +34,28 @@ export default function ProfileDashboard() {
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Household Card */}
-        <Card padding="md" className="border-brand-zest-200 bg-gradient-to-br from-brand-zest-50 to-white">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-zest-400 to-brand-coral-400 flex items-center justify-center shadow-sm">
-              <span className="text-2xl font-extrabold text-white">🏠</span>
+        <div className="illustration-container rounded-[24px] p-6 relative overflow-hidden">
+          <div className="flex flex-col items-center text-center relative z-10">
+            <div className="w-20 h-20 rounded-full bg-white/60 shadow-sm flex items-center justify-center mb-4 border border-border-subtle">
+              <span className="text-4xl food-glow">🏡</span>
             </div>
-            <div className="flex-1">
-              <h2 className="font-extrabold text-text-primary text-lg leading-tight">{userProfile.name}</h2>
-              <p className="text-xs text-text-tertiary font-medium mt-0.5">{userProfile.location}</p>
-              <div className="flex items-center gap-1 mt-2">
-                {userProfile.members.map((m, i) => (
-                  <div
-                    key={m.name}
-                    className={`w-7 h-7 rounded-full ${memberColors[i]} flex items-center justify-center text-[10px] font-extrabold text-white -ml-${i > 0 ? 1 : 0} border-2 border-white`}
-                    style={{ marginLeft: i > 0 ? -4 : 0 }}
-                  >
-                    {m.initials}
-                  </div>
-                ))}
-                <span className="text-xs text-text-tertiary font-medium ml-2">{userProfile.members.length} members</span>
-              </div>
+            <h2 className="font-extrabold text-text-primary text-xl leading-tight">{userProfile.name} Family</h2>
+            <p className="text-xs text-text-secondary font-medium mt-1">Based in {userProfile.location}</p>
+            
+            <div className="flex items-center justify-center mt-5">
+              {userProfile.members.map((m, i) => (
+                <div
+                  key={m.name}
+                  className={`w-10 h-10 rounded-full ${memberColors[i]} flex items-center justify-center text-xs font-extrabold text-white border-2 border-white shadow-sm`}
+                  style={{ marginLeft: i > 0 ? -12 : 0 }}
+                >
+                  {m.initials}
+                </div>
+              ))}
             </div>
           </div>
-        </Card>
+          <div className="absolute left-0 bottom-0 opacity-[0.02] text-9xl -translate-x-1/4 translate-y-1/4 pointer-events-none">🏠</div>
+        </div>
 
         {/* Impact Summary */}
         <div className="grid grid-cols-3 gap-2.5">
@@ -96,9 +95,9 @@ export default function ProfileDashboard() {
             <button
               key={item.label}
               onClick={() => navigate(item.route)}
-              className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl px-4 py-3.5 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left"
+              className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl px-4 py-3.5 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left"
             >
-              <div className="w-9 h-9 rounded-xl bg-bg-sunken flex items-center justify-center flex-shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-bg-sunken flex items-center justify-center flex-shrink-0 border border-border-subtle">
                 <item.icon className={`w-4.5 h-4.5 ${item.color}`} />
               </div>
               <div className="flex-1">
@@ -113,9 +112,9 @@ export default function ProfileDashboard() {
         {/* Insights link */}
         <button
           onClick={() => navigate('/profile/insights')}
-          className="flex items-center justify-center gap-2 py-3 bg-brand-plum-50 border border-brand-plum-200 rounded-2xl text-sm font-bold text-brand-plum-700 hover:bg-brand-plum-100 transition-colors"
+          className="flex items-center justify-center gap-2 py-3 bg-bg-sunken border border-border-subtle rounded-xl text-sm font-bold text-text-primary hover:bg-bg-elevated hover:shadow-sm transition-all"
         >
-          <Award className="w-4 h-4" />
+          <Award className="w-4 h-4 text-text-secondary" />
           View Household Insights
         </button>
       </div>

@@ -19,13 +19,13 @@ export default function OrderImport() {
   const handleConnect = (id: string) => {
     setConnecting(id);
     setTimeout(() => {
-      navigate('/pantry/review');
+      navigate('/pantry/review', { state: { isImport: true } });
     }, 2000);
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Connect Accounts" subtitle="Auto-import your grocery orders" backRoute="" />
+      <PageHeader title="Connect Accounts" subtitle="Auto-import your grocery orders" backRoute="/pantry" />
 
       <div className="px-5 pb-8 flex flex-col gap-6 pt-2">
         <div className="bg-brand-plum-50 border border-brand-plum-200 rounded-2xl p-4 flex gap-3 items-start">

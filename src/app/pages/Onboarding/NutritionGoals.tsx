@@ -18,8 +18,8 @@ export default function NutritionGoals() {
         <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-bg-sunken text-text-secondary">
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <div className="flex-1 h-1.5 bg-bg-sunken rounded-pill overflow-hidden">
-          <div className="h-full bg-brand w-3/4 rounded-pill"></div>
+        <div className="flex-1 h-1.5 bg-bg-sunken rounded-xl overflow-hidden">
+          <div className="h-full bg-brand w-3/4 rounded-xl"></div>
         </div>
         <span className="text-xs font-bold text-text-tertiary">3 OF 6</span>
       </div>

@@ -30,7 +30,7 @@ export default function CreateListing() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="New Post" subtitle="Community Food Network" backRoute="" />
+      <PageHeader title="New Post" subtitle="Community Food Network" backRoute="/community" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col flex-1">
         {/* Type toggle */}

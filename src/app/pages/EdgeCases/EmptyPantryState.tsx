@@ -9,7 +9,7 @@ export default function EmptyPantryState() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Pantry" subtitle="0 items" backRoute="" />
+      <PageHeader title="Pantry" subtitle="0 items" backRoute="/home" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
         <div className="w-24 h-24 rounded-full bg-bg-sunken flex items-center justify-center mb-6">

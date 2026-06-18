@@ -14,7 +14,7 @@ export default function TodayRecommendationDetail() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="Tonight's Pick" subtitle="AI Recommendation" backRoute="" />
+      <PageHeader title="Tonight's Pick" subtitle="AI Recommendation" backRoute="/home" />
 
       {/* Hero */}
       <div className={`mx-5 rounded-3xl overflow-hidden bg-gradient-to-br ${todayRecipe.bgGradient} h-52 flex items-center justify-center relative mb-5`}>

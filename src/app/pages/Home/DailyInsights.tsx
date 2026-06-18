@@ -15,7 +15,7 @@ export default function DailyInsights() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="Nutrition Insights" subtitle="Daily & Weekly Analysis" backRoute="" />
+      <PageHeader title="Nutrition Insights" subtitle="Daily & Weekly Analysis" backRoute="/home" />
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Today's Goals */}

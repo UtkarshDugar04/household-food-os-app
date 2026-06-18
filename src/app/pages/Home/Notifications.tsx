@@ -31,7 +31,7 @@ export default function Notifications() {
       <PageHeader
         title="Notifications"
         subtitle={`${unread.length} unread`}
-        backRoute=""
+        backRoute="/home"
         rightElement={
           <button className="text-xs font-bold text-brand">Mark all read</button>
         }

@@ -57,8 +57,8 @@ export default function CookMode() {
         <div className="flex-1">
           <p className="text-xs text-text-tertiary font-bold uppercase tracking-widest">{recipe.name}</p>
           <div className="flex items-center gap-2 mt-1">
-            <div className="flex-1 h-1.5 bg-bg-sunken rounded-pill overflow-hidden">
-              <div className="h-full bg-brand rounded-pill transition-all duration-slow" style={{ width: `${progress}%` }} />
+            <div className="flex-1 h-1.5 bg-bg-sunken rounded-md overflow-hidden">
+              <div className="h-full bg-brand rounded-md transition-all duration-slow" style={{ width: `${progress}%` }} />
             </div>
             <span className="text-xs font-bold text-text-tertiary whitespace-nowrap">
               {currentStep + 1}/{recipe.steps.length}

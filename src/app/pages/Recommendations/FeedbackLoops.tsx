@@ -40,7 +40,7 @@ export default function FeedbackLoops() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="How was it?" subtitle={recipe.name} backRoute="" />
+      <PageHeader title="How was it?" subtitle={recipe.name} backRoute="/home" />
 
       <div className="px-5 pb-8 flex flex-col gap-6">
         {/* Rating */}

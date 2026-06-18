@@ -11,6 +11,7 @@ export default function ListingDetail() {
   const location = useLocation();
   const listing = location.state?.listing || communityListings[0];
   const [requested, setRequested] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   const handleRequest = () => {
     setRequested(true);
@@ -19,7 +20,15 @@ export default function ListingDetail() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title={listing.type === 'offer' ? 'Available Offer' : 'Community Request'} backRoute="" />
+      <PageHeader 
+        title={listing.type === 'offer' ? 'Available Offer' : 'Community Request'} 
+        backRoute="/community" 
+        rightElement={
+          <button onClick={() => setSaved(!saved)} className="w-9 h-9 rounded-full bg-bg-sunken flex items-center justify-center text-text-secondary hover:bg-bg-elevated hover:text-brand transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={saved ? 'text-brand' : ''}><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          </button>
+        }
+      />
 
       <div className="px-5 pb-8 flex flex-col gap-5">
         {/* Hero Card */}

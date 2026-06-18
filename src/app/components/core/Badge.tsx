@@ -7,9 +7,10 @@ interface BadgeProps {
   children: React.ReactNode;
   size?: 'xs' | 'sm';
   dot?: boolean;
+  className?: string;
 }
 
-export default function Badge({ variant = 'neutral', children, size = 'sm', dot = false }: BadgeProps) {
+export default function Badge({ variant = 'neutral', children, size = 'sm', dot = false, className = '' }: BadgeProps) {
   const styles: Record<BadgeVariant, string> = {
     critical: 'bg-error-bg text-error border-error/20',
     expiring: 'bg-warning-bg text-warning border-warning/20',
@@ -40,7 +41,7 @@ export default function Badge({ variant = 'neutral', children, size = 'sm', dot 
   };
 
   return (
-    <span className={`inline-flex items-center font-bold rounded-pill border ${styles[variant]} ${sizeStyles[size]}`}>
+    <span className={`inline-flex items-center font-bold rounded-pill border ${styles[variant]} ${sizeStyles[size]} ${className}`}>
       {dot && <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dotStyles[variant]}`} />}
       {children}
     </span>

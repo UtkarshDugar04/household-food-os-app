@@ -30,7 +30,7 @@ export default function InventoryList() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="Inventory" subtitle={`${pantryItems.length} items tracked`} backRoute="" />
+      <PageHeader title="Inventory" subtitle={`${pantryItems.length} items tracked`} backRoute="/pantry" />
       
       <div className="px-5 mb-3">
         <div className="relative">

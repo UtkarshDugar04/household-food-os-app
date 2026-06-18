@@ -21,7 +21,7 @@ export default function LowConfidenceInventory() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Needs Verification" subtitle="AI is unsure about these items" backRoute="" />
+      <PageHeader title="Needs Verification" subtitle="AI is unsure about these items" backRoute="/home" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div className="bg-warning-bg border border-warning/30 rounded-2xl p-4 flex gap-3 items-start">

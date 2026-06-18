@@ -10,7 +10,7 @@ export default function UnknownIngredient() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Unknown Item" subtitle="AI couldn't identify this" backRoute="" />
+      <PageHeader title="Unknown Item" subtitle="AI couldn't identify this" backRoute="/home" />
 
       <div className="flex-1 flex flex-col px-6 pt-6">
         <div className="w-full h-48 bg-bg-sunken border-2 border-border-strong rounded-3xl flex items-center justify-center mb-6 overflow-hidden relative">

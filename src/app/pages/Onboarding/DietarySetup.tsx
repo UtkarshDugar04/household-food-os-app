@@ -18,8 +18,8 @@ export default function DietarySetup() {
         <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-bg-sunken text-text-secondary">
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <div className="flex-1 h-1.5 bg-bg-sunken rounded-pill overflow-hidden">
-          <div className="h-full bg-brand w-2/4 rounded-pill"></div>
+        <div className="flex-1 h-1.5 bg-bg-sunken rounded-xl overflow-hidden">
+          <div className="h-full bg-brand w-2/4 rounded-xl"></div>
         </div>
         <span className="text-xs font-bold text-text-tertiary">2 OF 4</span>
       </div>
@@ -44,7 +44,7 @@ export default function DietarySetup() {
               <button 
                 key={type} 
                 onClick={() => setDietType(type)}
-                className={`px-4 py-2 rounded-pill font-bold transition-colors ${
+                className={`px-4 py-2 rounded-xl font-bold transition-colors ${
                   dietType === type
                     ? 'bg-brand text-white shadow-sm'
                     : 'bg-bg-elevated text-text-secondary border border-border-subtle hover:border-brand-muted'
@@ -65,7 +65,7 @@ export default function DietarySetup() {
             {restrictions.map((restriction) => (
               <button 
                 key={restriction} 
-                className="px-4 py-2 rounded-pill font-semibold bg-bg-elevated text-text-secondary border border-border-subtle hover:bg-bg-sunken transition-colors"
+                className="px-4 py-2 rounded-xl font-semibold bg-bg-elevated text-text-secondary border border-border-subtle hover:bg-bg-sunken transition-colors"
               >
                 {restriction}
               </button>

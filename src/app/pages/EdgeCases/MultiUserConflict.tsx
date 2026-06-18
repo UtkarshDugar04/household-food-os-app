@@ -9,7 +9,7 @@ export default function MultiUserConflict() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Sync Issue" subtitle="Household Conflict" backRoute="" />
+      <PageHeader title="Sync Issue" subtitle="Household Conflict" backRoute="/home" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
         <div className="w-24 h-24 rounded-full bg-warning-bg border-4 border-warning/20 flex items-center justify-center mb-6">

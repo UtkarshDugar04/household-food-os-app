@@ -17,7 +17,7 @@ export default function InventoryHistory() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="History" subtitle="Inventory activity log" backRoute="" />
+      <PageHeader title="History" subtitle="Inventory activity log" backRoute="/pantry" />
 
       <div className="px-5 pb-8 pt-4">
         <div className="relative border-l-2 border-border-subtle ml-6 space-y-8 pb-4">

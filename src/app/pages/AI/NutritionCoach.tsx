@@ -24,7 +24,7 @@ export default function NutritionCoach() {
   return (
     <div className="flex flex-col h-screen bg-bg-base relative">
       <div className="z-10 bg-bg-base/90 backdrop-blur-md border-b border-border-subtle">
-        <PageHeader title="Nutrition Coach" subtitle="AI Dietitian" backRoute="" />
+        <PageHeader title="Nutrition Coach" subtitle="AI Dietitian" backRoute="/home" />
         
         <div className="px-5 pb-4">
           <div className="bg-brand-sky-50 border border-brand-sky-200 rounded-2xl p-4 shadow-sm">
@@ -76,7 +76,7 @@ export default function NutritionCoach() {
             value={input}
             onChange={e => setInput(e.target.value)}
             placeholder="Ask about your diet..."
-            className="flex-1 bg-bg-sunken border border-border-subtle rounded-full px-5 py-3.5 text-sm font-medium focus:outline-none focus:border-text-primary transition-colors"
+            className="flex-1 bg-bg-sunken border border-border-subtle rounded-xl px-5 py-3.5 text-sm font-medium focus:outline-none focus:border-text-primary transition-colors"
             onKeyDown={e => e.key === 'Enter' && sendMsg()}
           />
           <button onClick={sendMsg} className="w-12 h-12 rounded-full bg-text-primary text-bg-base flex items-center justify-center hover:bg-text-secondary transition-colors shadow-md flex-shrink-0">

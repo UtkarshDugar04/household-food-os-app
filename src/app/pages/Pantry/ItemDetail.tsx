@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Clock, MapPin, Tag, TrendingUp, ChevronRight, Utensils } from 'lucide-react';
 import PageHeader from '../../components/core/PageHeader';
@@ -12,13 +12,22 @@ export default function ItemDetail() {
   const navigate = useNavigate();
   const location = useLocation();
   const item = location.state?.item || pantryItems[0];
-
+  const [saved, setSaved] = useState(false);
   const recipesUsingItem = recipes.filter(r => r.ingredients.some(ing => ing.pantryItem === item.id));
   const getExpiryVariant = (days: number) => days <= 1 ? 'critical' : days <= 3 ? 'expiring' : days <= 7 ? 'warning' : 'fresh';
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title={item.name} subtitle={`${item.category} · ${item.location}`} backRoute="" />
+      <PageHeader 
+        title={item.name} 
+        subtitle={`${item.category} · ${item.location}`} 
+        backRoute="/pantry" 
+        rightElement={
+          <button onClick={() => setSaved(!saved)} className="w-9 h-9 rounded-full bg-bg-sunken flex items-center justify-center text-text-secondary hover:bg-bg-elevated hover:text-brand transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={saved ? 'text-brand' : ''}><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          </button>
+        }
+      />
 
       <div className="px-5 flex flex-col gap-4 pb-6">
         {/* Hero card */}

@@ -23,7 +23,7 @@ export default function ShoppingPreferences() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Shopping Accounts" subtitle="Auto-sync and compare" backRoute="" />
+      <PageHeader title="Shopping Accounts" subtitle="Auto-sync and compare" backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div className="bg-brand-plum-50 border border-brand-plum-200 rounded-2xl p-4 flex gap-3 items-center mb-2">

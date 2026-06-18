@@ -23,7 +23,7 @@ export default function Welcome() {
           <Brain className="w-12 h-12 text-white" />
         </div>
 
-        <div className="mb-2 px-3 py-1 bg-brand-light border border-brand/20 rounded-pill inline-flex items-center gap-1.5">
+        <div className="mb-2 px-3 py-1 bg-brand-light border border-brand/20 rounded-xl inline-flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-brand" />
           <span className="text-xs font-bold text-brand uppercase tracking-widest">AI-Powered Food OS</span>
         </div>
@@ -53,7 +53,7 @@ export default function Welcome() {
               <button
                 key={i}
                 onClick={() => setFeatureIdx(i)}
-                className={`h-1.5 rounded-pill transition-all duration-normal ${i === featureIdx ? 'w-6 bg-brand' : 'w-1.5 bg-border-strong'}`}
+                className={`h-1.5 rounded-xl transition-all duration-normal ${i === featureIdx ? 'w-6 bg-brand' : 'w-1.5 bg-border-strong'}`}
               />
             ))}
           </div>

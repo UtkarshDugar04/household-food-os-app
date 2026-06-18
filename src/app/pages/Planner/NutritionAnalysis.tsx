@@ -24,7 +24,7 @@ export default function NutritionAnalysis() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Nutrition Analysis" subtitle="Weekly Plan Averages" backRoute="" />
+      <PageHeader title="Nutrition Analysis" subtitle="Weekly Plan Averages" backRoute="/planner" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         {/* Macro Score */}

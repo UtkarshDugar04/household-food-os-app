@@ -42,7 +42,7 @@ export default function PurchaseRecommendations() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Suggested Buys" subtitle="AI predicts you need these" backRoute="" />
+      <PageHeader title="Suggested Buys" subtitle="AI predicts you need these" backRoute="/shopping/restock" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6 flex-1">
         

@@ -48,6 +48,7 @@ import ItemDetail from './pages/Pantry/ItemDetail';
 import CategoryView from './pages/Pantry/CategoryView';
 import PhotoScan from './pages/Pantry/PhotoScan';
 import ReceiptScan from './pages/Pantry/ReceiptScan';
+import VoiceAdd from './pages/Pantry/VoiceAdd';
 import OrderImport from './pages/Pantry/OrderImport';
 import InventoryReview from './pages/Pantry/InventoryReview';
 import InventoryHistory from './pages/Pantry/InventoryHistory';
@@ -128,6 +129,7 @@ function App() {
           <Route path="/pantry/category" element={<CategoryView />} />
           <Route path="/pantry/photo" element={<PhotoScan />} />
           <Route path="/pantry/receipt" element={<ReceiptScan />} />
+          <Route path="/pantry/voice" element={<VoiceAdd />} />
           <Route path="/pantry/import" element={<OrderImport />} />
           <Route path="/pantry/review" element={<InventoryReview />} />
           <Route path="/pantry/history" element={<InventoryHistory />} />

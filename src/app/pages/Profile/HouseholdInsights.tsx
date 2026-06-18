@@ -9,7 +9,7 @@ export default function HouseholdInsights() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Insights" subtitle="Household Data & Trends" backRoute="" />
+      <PageHeader title="Insights" subtitle="Household Data & Trends" backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         
@@ -34,7 +34,7 @@ export default function HouseholdInsights() {
             <PieChart className="w-4 h-4 text-brand" /> Category Breakdown
           </h2>
           <div className="bg-bg-elevated border border-border-subtle rounded-2xl p-4">
-            <div className="flex h-4 rounded-pill overflow-hidden mb-4">
+            <div className="flex h-4 rounded-md overflow-hidden mb-4">
               <div className="w-2/5 bg-brand-sage-500"></div>
               <div className="w-1/4 bg-brand-sky-500"></div>
               <div className="w-1/5 bg-brand-coral-500"></div>

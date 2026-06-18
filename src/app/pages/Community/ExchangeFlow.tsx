@@ -36,7 +36,7 @@ export default function ExchangeFlow() {
       </div>
 
       <div className="z-10 bg-bg-base/90 backdrop-blur-md border-b border-border-subtle">
-        <PageHeader title="Exchange with Rahul" subtitle="Fresh Tomatoes (Offer)" backRoute="" />
+        <PageHeader title="Exchange with Rahul" subtitle="Fresh Tomatoes (Offer)" backRoute="/community" />
         
         {status === 'accepted' && (
           <div className="px-5 pb-4">

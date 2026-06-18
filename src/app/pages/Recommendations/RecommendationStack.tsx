@@ -35,7 +35,7 @@ export default function RecommendationStack() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <div className="flex items-center px-5 pt-6 pb-4 gap-3">
+      <div className="flex items-center justify-between px-5 pt-12 pb-4">
         <button onClick={() => navigate(-1)} className="w-9 h-9 rounded-full bg-bg-sunken flex items-center justify-center">
           <ChevronLeft className="w-5 h-5 text-text-secondary" />
         </button>

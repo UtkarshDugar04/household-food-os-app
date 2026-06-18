@@ -11,7 +11,7 @@ export default function NutritionGoalsSettings() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Nutrition Goals" subtitle="Daily Targets" backRoute="" />
+      <PageHeader title="Nutrition Goals" subtitle="Daily Targets" backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div className="bg-brand-sky-50 border border-brand-sky-200 rounded-2xl p-4 flex gap-3 items-start mb-2">

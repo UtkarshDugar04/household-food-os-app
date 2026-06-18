@@ -11,7 +11,7 @@ export default function HouseholdProfile() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Household Members" subtitle={`${members.length} people`} backRoute="" />
+      <PageHeader title="Household Members" subtitle={`${members.length} people`} backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div className="bg-brand-zest-50 border border-brand-zest-200 rounded-2xl p-4 flex gap-3 items-center">

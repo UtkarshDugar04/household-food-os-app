@@ -61,7 +61,7 @@ export default function ExpiryCenter() {
       <PageHeader
         title="Expiry Center"
         subtitle={`${grouped.critical.length + grouped.soon.length + grouped.thisWeek.length} items need attention`}
-        backRoute=""
+        backRoute="/home"
       />
 
       <div className="px-5 pb-6">

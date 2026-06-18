@@ -14,7 +14,7 @@ export default function WeekView() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="Week View" subtitle="Jun 16 – Jun 22" backRoute="" />
+      <PageHeader title="Week View" subtitle="Jun 16 – Jun 22" backRoute="/planner" />
 
       {/* Day Selector */}
       <div className="px-5 mb-5">

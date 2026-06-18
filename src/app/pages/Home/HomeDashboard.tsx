@@ -32,7 +32,7 @@ export default function HomeDashboard() {
         <div>
           <p className="text-xs font-bold text-text-tertiary uppercase tracking-widest mb-1">Wednesday, Jun 18</p>
           <h1 className="text-2xl font-extrabold text-text-primary tracking-tight leading-tight">
-            What should I<br />do today?
+            Good afternoon,<br />Utkarsh.
           </h1>
         </div>
         <div className="flex items-center gap-2 pt-1">
@@ -47,42 +47,37 @@ export default function HomeDashboard() {
           </button>
           <button
             onClick={() => navigate('/profile')}
-            className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-zest-400 to-brand-coral-400 flex items-center justify-center shadow-sm hover:opacity-90 transition-opacity"
+            className="w-10 h-10 rounded-full bg-bg-elevated border border-border-subtle flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
           >
-            <span className="font-extrabold text-white text-sm">UD</span>
+            <span className="font-extrabold text-text-primary text-sm">UD</span>
           </button>
         </div>
       </div>
 
-      {/* ---- HOUSEHOLD SNAPSHOT ---- */}
-      <div className="px-5 mb-5">
-        <div className="grid grid-cols-3 gap-2.5">
-          <button
-            onClick={() => navigate('/home/insights')}
-            className="bg-gradient-to-br from-brand-zest-50 to-brand-zest-100 border border-brand-zest-200 rounded-2xl p-3 flex flex-col items-center text-center hover:shadow-md transition-all active:scale-95"
-          >
-            <HeartPulse className="w-5 h-5 text-brand mb-1.5" />
-            <span className="text-[9px] font-bold text-brand uppercase tracking-widest">Health</span>
-            <span className="text-xl font-extrabold text-brand">{householdSnapshot.healthScore}%</span>
-          </button>
-          <button
-            onClick={() => navigate('/home/insights')}
-            className="bg-bg-elevated border border-border-subtle rounded-2xl p-3 flex flex-col items-center text-center hover:shadow-md transition-all active:scale-95"
-          >
-            <Target className="w-5 h-5 text-brand-sky-500 mb-1.5" />
-            <span className="text-[9px] font-bold text-text-tertiary uppercase tracking-widest">Protein</span>
-            <span className="text-xl font-extrabold text-text-primary">{householdSnapshot.proteinToday}g</span>
-            <span className="text-[9px] text-text-tertiary">of {householdSnapshot.proteinGoal}g</span>
-          </button>
-          <button
-            onClick={() => navigate('/home/impact')}
-            className="bg-bg-elevated border border-border-subtle rounded-2xl p-3 flex flex-col items-center text-center hover:shadow-md transition-all active:scale-95"
-          >
-            <TrendingDown className="w-5 h-5 text-success mb-1.5" />
-            <span className="text-[9px] font-bold text-text-tertiary uppercase tracking-widest">Saved</span>
-            <span className="text-xl font-extrabold text-text-primary">₹{(householdSnapshot.moneySavedThisMonth / 1000).toFixed(1)}k</span>
-          </button>
-        </div>
+      {/* ---- DAILY BRIEFING (Humanized Insights) ---- */}
+      <div className="px-5 mb-8 mt-2">
+        <button
+          onClick={() => navigate('/home/insights')}
+          className="w-full text-left illustration-container rounded-[24px] p-5 flex flex-col gap-4 hover:-translate-y-0.5 active:scale-[0.98] transition-transform"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-white/60 shadow-sm flex items-center justify-center flex-shrink-0 border border-border-subtle z-10">
+              <span className="text-2xl food-glow">🥗</span>
+            </div>
+            <div className="flex-1 z-10">
+              <p className="text-sm font-bold text-text-primary leading-snug">
+                Your household is looking healthy today.
+              </p>
+              <p className="text-xs text-text-secondary mt-1">
+                You're just <strong className="text-text-primary">{householdSnapshot.proteinGoal - householdSnapshot.proteinToday}g</strong> away from your daily protein goal.
+              </p>
+            </div>
+          </div>
+          <div className="relative h-1.5 w-full bg-black/5 rounded-md overflow-hidden z-10">
+             <div className="absolute top-0 left-0 h-full bg-brand rounded-md transition-all duration-1000" style={{ width: `${(householdSnapshot.proteinToday / householdSnapshot.proteinGoal) * 100}%` }} />
+          </div>
+          <div className="absolute right-0 bottom-0 opacity-[0.03] text-9xl translate-x-1/4 translate-y-1/4 pointer-events-none">🥗</div>
+        </button>
       </div>
 
       {/* ---- EXPIRY ALERT BANNER (if critical items) ---- */}
@@ -124,26 +119,25 @@ export default function HomeDashboard() {
           interactive
           padding="none"
           onClick={() => navigate('/home/recommendation')}
-          className="overflow-hidden border-border-strong"
+          className="overflow-hidden border-border-subtle shadow-sm rounded-[24px]"
         >
           {/* Hero area */}
-          <div className={`h-36 bg-gradient-to-br ${todayRecipe.bgGradient} relative overflow-hidden`}>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-7xl opacity-80" style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.15))' }}>
-                {todayRecipe.emoji}
-              </span>
-            </div>
+          <div className="h-44 illustration-container relative">
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand/10 to-transparent z-0" />
+            <span className="text-8xl z-10 food-glow transition-transform hover:scale-105 duration-500">
+              {todayRecipe.emoji}
+            </span>
             {/* Match score badge */}
-            <div className="absolute top-3 left-3">
-              <Badge variant="brand" size="sm">
-                <Sparkles className="w-3 h-3" />
+            <div className="absolute top-4 left-4 z-10">
+              <Badge variant="neutral" size="sm" className="bg-white/80 backdrop-blur-md shadow-sm border border-white/40 text-text-primary">
+                <Sparkles className="w-3 h-3 text-brand" />
                 {todayRecipe.matchScore}% Match
               </Badge>
             </div>
             {/* Tags */}
-            <div className="absolute bottom-3 left-3 flex gap-1.5 flex-wrap">
+            <div className="absolute bottom-4 left-4 flex gap-2 flex-wrap z-10">
               {todayRecipe.tags.slice(0, 3).map(tag => (
-                <span key={tag} className="px-2 py-0.5 bg-black/30 backdrop-blur-sm text-white rounded-pill text-[10px] font-bold">
+                <span key={tag} className="px-3 py-1 bg-white/80 backdrop-blur-md border border-white/40 text-text-primary rounded-full text-[10px] font-bold shadow-sm">
                   {tag}
                 </span>
               ))}
@@ -175,9 +169,9 @@ export default function HomeDashboard() {
             </div>
 
             {/* AI Reasoning */}
-            <div className="flex items-start gap-2 bg-brand-plum-50 border border-brand-plum-100 rounded-xl px-3 py-2 mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-brand-plum-500 mt-0.5 flex-shrink-0" />
-              <p className="text-xs text-brand-plum-700 font-medium leading-relaxed">{todayRecipe.aiReason}</p>
+            <div className="flex items-start gap-2 bg-bg-sunken rounded-lg px-3 py-2.5 mb-5 border border-border-subtle">
+              <Sparkles className="w-3.5 h-3.5 text-text-secondary mt-0.5 flex-shrink-0" />
+              <p className="text-xs text-text-secondary font-medium leading-relaxed">{todayRecipe.aiReason}</p>
             </div>
 
             <Button
@@ -209,14 +203,14 @@ export default function HomeDashboard() {
             <button
               key={recipe.id}
               onClick={() => navigate('/recipe')}
-              className="min-w-[155px] snap-center flex-shrink-0 bg-bg-elevated border border-border-subtle rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all text-left"
+              className="min-w-[155px] snap-center flex-shrink-0 bg-bg-elevated border border-border-subtle rounded-xl overflow-hidden hover:shadow-sm hover:-translate-y-0.5 active:scale-95 transition-all text-left"
             >
-              <div className={`h-20 bg-gradient-to-br ${recipe.bgGradient} flex items-center justify-center`}>
-                <span className="text-4xl">{recipe.emoji}</span>
+              <div className={`h-20 bg-bg-sunken border-b border-border-subtle flex items-center justify-center`}>
+                <span className="text-4xl drop-shadow-sm">{recipe.emoji}</span>
               </div>
               <div className="p-3">
                 <p className="font-bold text-text-primary text-sm truncate">{recipe.name}</p>
-                <p className="text-xs text-text-tertiary mt-0.5">{recipe.prepTime + recipe.cookTime} min · {recipe.nutrition.protein}g protein</p>
+                <p className="text-[10px] text-text-tertiary mt-1">{recipe.prepTime + recipe.cookTime} min · {recipe.nutrition.protein}g prot</p>
               </div>
             </button>
           ))}
@@ -229,50 +223,50 @@ export default function HomeDashboard() {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => navigate('/home/expiry-center')}
-            className="flex items-center gap-3 p-3.5 bg-warning-bg border border-warning/20 rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left"
+            className="flex items-center gap-3 p-4 bg-bg-elevated border border-border-subtle rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left group"
           >
-            <div className="w-9 h-9 rounded-xl bg-warning/10 flex items-center justify-center flex-shrink-0">
-              <AlertTriangle className="w-4.5 h-4.5 text-warning" />
+            <div className="w-10 h-10 rounded-full bg-bg-sunken flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors border border-transparent group-hover:border-border-subtle">
+              <span className="text-lg">⚠️</span>
             </div>
             <div>
               <p className="text-sm font-bold text-text-primary">{expiringItems.length} Expiring</p>
-              <p className="text-xs text-text-secondary">This week</p>
+              <p className="text-[10px] text-text-tertiary">This week</p>
             </div>
           </button>
           <button
             onClick={() => navigate('/shopping/list')}
-            className="flex items-center gap-3 p-3.5 bg-info-bg border border-info/20 rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left"
+            className="flex items-center gap-3 p-4 bg-bg-elevated border border-border-subtle rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left group"
           >
-            <div className="w-9 h-9 rounded-xl bg-info/10 flex items-center justify-center flex-shrink-0">
-              <ShoppingBag className="w-4.5 h-4.5 text-info" />
+            <div className="w-10 h-10 rounded-full bg-bg-sunken flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors border border-transparent group-hover:border-border-subtle">
+              <span className="text-lg">🛒</span>
             </div>
             <div>
               <p className="text-sm font-bold text-text-primary">14 Items</p>
-              <p className="text-xs text-text-secondary">Shopping list</p>
+              <p className="text-[10px] text-text-tertiary">Shopping list</p>
             </div>
           </button>
           <button
             onClick={() => navigate('/planner')}
-            className="flex items-center gap-3 p-3.5 bg-success-bg border border-success/20 rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left"
+            className="flex items-center gap-3 p-4 bg-bg-elevated border border-border-subtle rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left group"
           >
-            <div className="w-9 h-9 rounded-xl bg-success/10 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-4.5 h-4.5 text-success" />
+            <div className="w-10 h-10 rounded-full bg-bg-sunken flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors border border-transparent group-hover:border-border-subtle">
+              <span className="text-lg">📅</span>
             </div>
             <div>
               <p className="text-sm font-bold text-text-primary">7 Days</p>
-              <p className="text-xs text-text-secondary">Meals planned</p>
+              <p className="text-[10px] text-text-tertiary">Meals planned</p>
             </div>
           </button>
           <button
             onClick={() => navigate('/community')}
-            className="flex items-center gap-3 p-3.5 bg-brand-sky-50 border border-brand-sky-200 rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left"
+            className="flex items-center gap-3 p-4 bg-bg-elevated border border-border-subtle rounded-2xl hover:shadow-sm active:scale-95 transition-all text-left group"
           >
-            <div className="w-9 h-9 rounded-xl bg-brand-sky-100 flex items-center justify-center flex-shrink-0">
-              <Users className="w-4.5 h-4.5 text-brand-sky-600" />
+            <div className="w-10 h-10 rounded-full bg-bg-sunken flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors border border-transparent group-hover:border-border-subtle">
+              <span className="text-lg">🏘️</span>
             </div>
             <div>
               <p className="text-sm font-bold text-text-primary">8 Nearby</p>
-              <p className="text-xs text-text-secondary">Food listings</p>
+              <p className="text-[10px] text-text-tertiary">Food listings</p>
             </div>
           </button>
         </div>

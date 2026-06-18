@@ -64,7 +64,7 @@ export default function ExpiryTimeline() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Expiry Timeline" subtitle="Keep track of freshness" backRoute="" />
+      <PageHeader title="Expiry Timeline" subtitle="Keep track of freshness" backRoute="/pantry" />
 
       <div className="px-6 pb-20 relative pt-4">
         {/* Timeline Line */}

@@ -13,7 +13,7 @@ export default function DietaryProfile() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Dietary Preferences" subtitle="Applies to all meal recommendations" backRoute="" />
+      <PageHeader title="Dietary Preferences" subtitle="Applies to all meal recommendations" backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div>
@@ -22,10 +22,10 @@ export default function DietaryProfile() {
             {dietTypes.map(d => (
               <button
                 key={d}
-                onClick={() => setDiet(d)}
-                className={`px-4 py-2.5 rounded-pill font-bold text-sm transition-all border ${
-                  diet === d
-                    ? 'bg-brand text-white border-brand shadow-sm'
+                onClick={() => toggleDiet(d)}
+                className={`px-4 py-2.5 rounded-xl font-bold text-sm transition-all border ${
+                  selectedDiets.includes(d)
+                    ? 'bg-brand border-brand text-white shadow-[0_4px_12px_rgba(240,123,12,0.3)]'
                     : 'bg-bg-elevated text-text-secondary border-border-subtle hover:border-border-strong'
                 }`}
               >

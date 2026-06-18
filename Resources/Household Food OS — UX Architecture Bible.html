@@ -1728,39 +1728,45 @@ community opportunities section). Impact Dashboard (via impact section).
 
     <h4>Information Hierarchy</h4>
     <ul class="priority-list">
-      <li><span class="priority-badge p1">1</span><strong>Tonight's Recommendation Hero Card</strong>
- — Single large card with meal name, image, cook time, protein count, 
-expiry-prevention badge if applicable, and primary "Cook This" CTA.</li>
-      <li><span class="priority-badge p2">2</span><strong>Expiry Alerts</strong> — Red/amber urgency strip. "Things you'll lose this week." Items listed with days-remaining badges. Immediate action buttons.</li>
-      <li><span class="priority-badge p3">3</span><strong>Household Snapshot</strong> — Nutrition progress bar (today's protein), inventory health score, and a savings metric. Small but always visible.</li>
-      <li><span class="priority-badge p4">4</span><strong>Alternative Recommendations</strong> — Horizontal scroll of Best / Quick / Lazy / Protein cards. Secondary decisions if primary isn't appealing.</li>
-      <li><span class="priority-badge p5">5</span><strong>Shopping Signals, Community, Impact</strong> — Lower on the page. Non-urgent. Available but not competing with the primary decision.</li>
+      <li><span class="priority-badge p1">1</span><strong>Daily Briefing (Household Insight)</strong> — A warm, conversational card summarizing household health and progress toward goals. Sets a friendly, empathetic tone.</li>
+      <li><span class="priority-badge p2">2</span><strong>Tonight's Recommendation Hero Card</strong> — Single large card with meal name, image/emoji, cook time, protein count, expiry-prevention badge if applicable, and primary "Cook This" CTA.</li>
+      <li><span class="priority-badge p3">3</span><strong>Expiry Alerts</strong> — Friendly nudge to use items that are about to expire. Highlighted via subtle warnings.</li>
+      <li><span class="priority-badge p4">4</span><strong>Alternative Recommendations</strong> — Horizontal scroll of Alternative recipes if the primary isn't appealing.</li>
+      <li><span class="priority-badge p5">5</span><strong>Quick Actions</strong> — Organic, soft buttons for Expiry, Shopping List, Planner, and Community.</li>
     </ul>
 
     <h4>Layout Structure</h4>
     <div class="wireframe">
       <div class="wireframe-label">WIREFRAME — Screen 8: Home Dashboard</div>
-      <div class="wf-bar" style="font-weight:700; font-size:11pt; background:transparent; border:none; padding:8px 0;">🍽️ Good evening, Utkarsh</div>
-      <div class="wf-bar" style="font-size:8pt; background:#f1f5f9; color:#64748b;">Inventory Health: 87% &nbsp;|&nbsp; Today's Protein: 42/100g &nbsp;|&nbsp; Saved: ₹320 this month</div>
-      <div class="wf-hero">
-        <div style="font-size:8pt; font-weight:700; color:#1a7a4a; margin-bottom:4px;">⭐ TONIGHT'S RECOMMENDATION</div>
-        <div style="font-weight:800; font-size:13pt;">Dal Makhani + Roti</div>
-        <div style="font-size:8pt; color:#64748b; margin:4px 0;">Uses spinach expiring in 2 days · 38g protein · 35 min</div>
-        <div class="wf-row" style="margin-top:12px; justify-content:center; gap:8px;">
-          <div class="wf-col success" style="flex:0 0 auto; padding:8px 20px;"><strong>Cook This →</strong></div>
-          <div class="wf-col" style="flex:0 0 auto; padding:8px 16px;">See Recipe</div>
+      <div class="wf-bar" style="font-weight:700; font-size:11pt; background:transparent; border:none; padding:8px 0;">Good afternoon, Utkarsh.</div>
+      
+      <div class="wf-hero" style="background:#f8fafc; border:1px solid #e2e8f0; text-align:left;">
+        <div style="font-size:16pt; margin-bottom:4px;">🥗</div>
+        <div style="font-weight:700; font-size:10pt; color:#0f172a;">Your household is looking healthy today.</div>
+        <div style="font-size:8pt; color:#64748b;">You're just 42g away from your daily protein goal.</div>
+      </div>
+
+      <div class="wf-hero" style="padding:0; overflow:hidden;">
+        <div style="background:#e8f5ee; padding:24px; text-align:center;">
+          <div style="font-size:48pt; filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1));">🍲</div>
+        </div>
+        <div style="padding:16px; text-align:left;">
+          <div style="font-weight:800; font-size:12pt; color:#0f172a;">Dal Makhani + Roti</div>
+          <div style="font-size:8pt; color:#64748b; margin:4px 0;">35 min · 38g Protein · Prevents 150g waste</div>
+          <div class="wf-col success" style="margin-top:12px; padding:8px 20px; text-align:center; font-weight:700;">Cook This Now</div>
         </div>
       </div>
-      <div class="wf-bar" style="background:#fee2e2; border-color:#fca5a5; font-size:9pt; color:#991b1b;">⚠️ Expiry Alert: Spinach (2d) · Curd (1d) · Paneer (3d)</div>
-      <div style="font-weight:700; font-size:9pt; margin:8px 0 4px;">More Options</div>
+
+      <div style="font-weight:700; font-size:9pt; margin:16px 0 8px;">Quick Actions</div>
       <div class="wf-row">
-        <div class="wf-col">⚡ Quick<br><small>15 min</small></div>
-        <div class="wf-col">😴 Lazy<br><small>5 min</small></div>
-        <div class="wf-col">💪 Protein<br><small>45g</small></div>
+        <div class="wf-col" style="text-align:left;">⚠️ <strong>2 Expiring</strong><br><small>This week</small></div>
+        <div class="wf-col" style="text-align:left;">🛒 <strong>14 Items</strong><br><small>Shopping list</small></div>
       </div>
-      <div class="wf-bar" style="font-size:9pt; color:#2563eb; background:#dbeafe; border-color:#93c5fd;">🛒 Shopping Signal: Running low on milk (2 days left)</div>
-      <div class="wf-bar" style="font-size:9pt; color:#7c3aed; background:#ede9fe; border-color:#c4b5fd;">🤝 Community: 2kg tomatoes available 0.8km away</div>
-      <div class="wf-bar" style="font-size:9pt; color:#0f172a;">📊 This month: ₹1,200 saved · 3.2kg waste prevented · 12 nutrition goals met</div>
+      <div class="wf-row">
+        <div class="wf-col" style="text-align:left;">📅 <strong>7 Days</strong><br><small>Meals planned</small></div>
+        <div class="wf-col" style="text-align:left;">🏘️ <strong>8 Nearby</strong><br><small>Food listings</small></div>
+      </div>
+
       <div class="wf-nav">
         <div class="wf-nav-item active">🏠 Home</div>
         <div class="wf-nav-item">🥫 Pantry</div>
@@ -1772,13 +1778,11 @@ expiry-prevention badge if applicable, and primary "Cook This" CTA.</li>
 
     <h4>Section Breakdown</h4>
     <div class="section-card">
-      <div class="section-card-header">Household Snapshot Bar</div>
+      <div class="section-card-header">Daily Briefing (Insight)</div>
       <div class="section-card-body">
-        <p><strong>Purpose:</strong> Ambient awareness of household food health without requiring navigation to individual sections.</p>
-        <p><strong>Content:</strong> Inventory Health Score (%), Protein Progress (Xg / Yg), Monthly Savings (₹). Three metrics only — no more.</p>
-        <p><strong>Behavior:</strong> Always visible. Static — does not 
-scroll. Tapping each metric deep-links to its source screen (Pantry, 
-Nutrition Coach, Insights).</p>
+        <p><strong>Purpose:</strong> Humanized, conversational awareness of household food health.</p>
+        <p><strong>Content:</strong> Friendly greeting, dynamic insight text ("Your household is looking healthy today. You're just Xg away from your daily protein goal"), and a subtle progress bar.</p>
+        <p><strong>Behavior:</strong> Always visible. Static — does not scroll. Tapping links to Insights.</p>
         <p><strong>States:</strong> Normal | Warning (inventory health &lt;50%) | Celebrating (first time protein goal met today)</p>
       </div>
     </div>

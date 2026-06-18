@@ -16,7 +16,7 @@ export default function DayDetail() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title={`${day.day}, ${day.dateNum}`} subtitle={`${day.totalCalories} kcal · ${day.totalProtein}g protein`} backRoute="" />
+      <PageHeader title={`${day.day}, ${day.dateNum}`} subtitle={`${day.totalCalories} kcal · ${day.totalProtein}g protein`} backRoute="/planner" />
 
       <div className="px-5 pb-8 flex flex-col gap-6 pt-2">
         {/* Day Nutrition Progress */}

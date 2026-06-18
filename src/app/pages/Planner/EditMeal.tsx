@@ -12,9 +12,9 @@ export default function EditMeal() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <div className="px-5 pt-6 pb-4 flex items-center gap-3">
+      <div className="flex items-center justify-between px-5 pt-6 pb-4 bg-bg-base border-b border-border-subtle sticky top-0 z-10">
         <button onClick={() => navigate(-1)} className="w-10 h-10 -ml-2 rounded-full flex items-center justify-center hover:bg-bg-sunken transition-colors">
-          <X className="w-6 h-6 text-text-secondary" />
+          <ChevronLeft className="w-6 h-6 text-text-primary" />
         </button>
         <div className="flex-1">
           <h1 className="text-xl font-extrabold text-text-primary">Swap Meal</h1>
@@ -28,8 +28,8 @@ export default function EditMeal() {
           <input
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Search recipes or ingredients..."
-            className="w-full bg-bg-sunken border border-border-subtle rounded-2xl py-3 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-brand-muted transition-all"
+            placeholder="Search recipes..."
+            className="w-full bg-bg-sunken border border-border-subtle rounded-xl py-3.5 pl-10 pr-4 text-sm focus:outline-none focus:border-brand-muted transition-colors"
           />
         </div>
 

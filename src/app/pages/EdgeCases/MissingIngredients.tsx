@@ -9,7 +9,7 @@ export default function MissingIngredients() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Pantry Check" subtitle="Lemon Herb Chicken" backRoute="" />
+      <PageHeader title="Pantry Check" subtitle="Lemon Herb Chicken" backRoute="/home" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
         <div className="w-24 h-24 rounded-full bg-error-bg border-4 border-error/20 flex items-center justify-center mb-6">

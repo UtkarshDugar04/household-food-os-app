@@ -17,7 +17,7 @@ export default function ImpactDashboard() {
 
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
-      <PageHeader title="Your Impact" subtitle="Environmental & Financial" backRoute="" />
+      <PageHeader title="Your Impact" subtitle="Environmental & Financial" backRoute="/home" />
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Hero Impact Banner */}

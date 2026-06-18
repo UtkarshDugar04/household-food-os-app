@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Flame, Droplet, Zap, ChevronRight, Target, Plus } from 'lucide-react';
+import { Flame, Droplet, Zap, ChevronRight, Target, Plus, Sparkles } from 'lucide-react';
 import Card from '../../components/core/Card';
 import Button from '../../components/core/Button';
 import ProgressBar from '../../components/core/ProgressBar';
@@ -26,17 +26,20 @@ export default function PlannerDashboard() {
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Weekly Calendar */}
-        <Card padding="md">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="font-extrabold text-text-primary">This Week</h2>
+        <div className="illustration-container rounded-[24px] p-5">
+          <div className="flex justify-between items-center mb-5 relative z-10">
+            <div>
+              <h2 className="font-extrabold text-text-primary text-lg leading-tight">Your Week</h2>
+              <p className="text-xs text-text-secondary font-medium mt-0.5">On track to hit nutrition goals. 🎯</p>
+            </div>
             <button
               onClick={() => navigate('/planner/week')}
-              className="text-xs font-bold text-brand flex items-center gap-0.5 hover:underline"
+              className="w-8 h-8 rounded-full bg-white/60 shadow-sm flex items-center justify-center hover:bg-white transition-colors border border-border-subtle"
             >
-              Full View <ChevronRight className="w-3 h-3" />
+              <ChevronRight className="w-4 h-4 text-text-primary" />
             </button>
           </div>
-          <div className="flex justify-between gap-1">
+          <div className="flex justify-between gap-1 relative z-10">
             {weeklyMealPlan.map((day, i) => {
               const isToday = i === todayIndex;
               const hasMeals = true;
@@ -44,22 +47,22 @@ export default function PlannerDashboard() {
                 <button
                   key={day.day}
                   onClick={() => navigate('/planner/day', { state: { day } })}
-                  className={`flex flex-col items-center gap-1.5 py-2.5 px-1 rounded-2xl flex-1 transition-all active:scale-95 ${
-                    isToday ? 'bg-brand shadow-sm' : 'hover:bg-bg-sunken'
+                  className={`flex flex-col items-center gap-1.5 py-3 px-1 rounded-2xl flex-1 transition-all active:scale-95 ${
+                    isToday ? 'bg-white shadow-sm border border-border-subtle' : 'hover:bg-white/50 border border-transparent'
                   }`}
                 >
-                  <span className={`text-[10px] font-bold uppercase tracking-widest ${isToday ? 'text-white/70' : 'text-text-tertiary'}`}>
+                  <span className={`text-[10px] font-bold uppercase tracking-widest ${isToday ? 'text-brand' : 'text-text-tertiary'}`}>
                     {day.day}
                   </span>
-                  <span className={`text-base font-extrabold ${isToday ? 'text-white' : 'text-text-primary'}`}>
+                  <span className={`text-base font-extrabold ${isToday ? 'text-text-primary' : 'text-text-secondary'}`}>
                     {day.dateNum}
                   </span>
-                  <div className={`w-1.5 h-1.5 rounded-full ${isToday ? 'bg-white' : hasMeals ? 'bg-brand' : 'bg-bg-sunken'}`} />
+                  <div className={`w-1 h-1 rounded-full ${isToday ? 'bg-brand' : hasMeals ? 'bg-border-strong' : 'bg-transparent'}`} />
                 </button>
               );
             })}
           </div>
-        </Card>
+        </div>
 
         {/* Today's Meals Preview */}
         <div>
@@ -69,7 +72,7 @@ export default function PlannerDashboard() {
               Edit <ChevronRight className="w-3 h-3" />
             </button>
           </div>
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-3">
             {['breakfast', 'lunch', 'dinner'].map(mealTime => {
               const todayPlan = weeklyMealPlan[todayIndex];
               const meal = todayPlan.meals[mealTime as keyof typeof todayPlan.meals];
@@ -78,17 +81,21 @@ export default function PlannerDashboard() {
                 <button
                   key={mealTime}
                   onClick={() => navigate('/recipe')}
-                  className="flex items-center gap-3 bg-bg-elevated border border-border-subtle rounded-2xl px-4 py-3 hover:shadow-sm active:scale-[0.99] transition-all text-left"
+                  className="flex items-center gap-4 bg-bg-elevated border border-border-subtle rounded-[20px] p-3 hover:shadow-sm hover:border-border-strong active:scale-[0.99] transition-all text-left"
                 >
-                  <span className="text-xl">{meal.emoji}</span>
+                  <div className="w-16 h-16 rounded-xl bg-bg-sunken flex items-center justify-center flex-shrink-0 relative overflow-hidden border border-border-subtle">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-brand/5 to-transparent z-0" />
+                    <span className="text-3xl z-10 food-glow">{meal.emoji}</span>
+                  </div>
                   <div className="flex-1">
-                    <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-widest">{labels[mealTime]}</p>
-                    <p className="font-bold text-text-primary text-sm mt-0.5">{meal.name}</p>
+                    <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider">{labels[mealTime]}</p>
+                    <p className="font-extrabold text-text-primary text-sm mt-0.5">{meal.name}</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-xs font-bold text-text-secondary">{meal.calories} kcal</span>
+                      <span className="text-[10px] font-medium text-text-tertiary">· {meal.protein}g prot</span>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-xs font-bold text-text-primary">{meal.calories} kcal</p>
-                    <p className="text-[10px] text-text-tertiary">{meal.protein}g protein</p>
-                  </div>
+                  <ChevronRight className="w-4 h-4 text-text-tertiary/50 mr-1" />
                 </button>
               );
             })}
@@ -124,11 +131,16 @@ export default function PlannerDashboard() {
         </Card>
 
         {/* AI Insight */}
-        <AICard title="Weekly Intelligence">
-          This week's plan covers <strong className="text-brand-plum-800">avg {weekAvgProtein}g protein/day</strong> — 
-          within 3g of your goal. Wednesday is under-planned (56g protein). 
-          Adding Paneer Bhurji at dinner closes the gap.
-        </AICard>
+        <div className="flex items-start gap-3 bg-bg-sunken border border-border-subtle rounded-xl p-4">
+          <Sparkles className="w-4 h-4 text-text-secondary mt-0.5 flex-shrink-0" />
+          <div>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              This week's plan covers <strong className="text-text-primary">avg {weekAvgProtein}g protein/day</strong> — 
+              within 3g of your goal. Wednesday is under-planned (56g protein). 
+              Adding Paneer Bhurji at dinner closes the gap.
+            </p>
+          </div>
+        </div>
 
         {/* CTA */}
         <Button size="lg" fullWidth icon={<Target className="w-5 h-5" />} onClick={() => navigate('/planner/generate')}>

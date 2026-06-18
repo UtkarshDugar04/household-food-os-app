@@ -23,7 +23,7 @@ export default function CategoryView() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title={category} subtitle={`${items.length} items`} backRoute="" />
+      <PageHeader title={category} subtitle={`${items.length} items`} backRoute="/pantry" />
 
       <div className="px-5 pb-6 pt-2">
         <div className="flex gap-2 mb-4">
@@ -32,8 +32,8 @@ export default function CategoryView() {
             <input
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Search category..."
-              className="w-full bg-bg-sunken border border-border-subtle rounded-2xl py-2.5 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-brand-muted transition-all"
+              placeholder={`Search ${category}...`}
+              className="w-full bg-bg-sunken border border-border-subtle rounded-xl py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:border-brand-muted transition-colors"
             />
           </div>
           <button className="w-11 h-11 rounded-2xl bg-bg-sunken border border-border-subtle flex items-center justify-center text-text-secondary hover:border-border-strong transition-colors">

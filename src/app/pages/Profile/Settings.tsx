@@ -26,7 +26,7 @@ export default function Settings() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Settings" subtitle="App & Account" backRoute="" />
+      <PageHeader title="Settings" subtitle="App & Account" backRoute="/profile" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         {sections.map(section => (

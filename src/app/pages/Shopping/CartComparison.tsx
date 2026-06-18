@@ -46,7 +46,7 @@ export default function CartComparison() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Compare & Buy" subtitle="14 items on your list" backRoute="" />
+      <PageHeader title="Compare & Buy" subtitle="14 items on your list" backRoute="/shopping/restock" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-5 flex-1">
         

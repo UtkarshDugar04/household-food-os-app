@@ -20,39 +20,59 @@ export default function CommunityHome() {
           <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">Community</h1>
           <p className="text-sm text-text-secondary mt-0.5">Food Rescue Network</p>
         </div>
-        <Button variant="outline" size="sm" icon={<MapPin className="w-4 h-4" />} onClick={() => navigate('/community/map')}>
-          Map
-        </Button>
       </div>
 
       <div className="px-5 pb-6 flex flex-col gap-5">
-        {/* Impact Strip */}
-        <div className="bg-gradient-to-r from-brand-sage-500 to-brand-sage-600 rounded-2xl px-5 py-4 flex justify-around">
-          {[
-            { value: '142', label: 'Meals Rescued' },
-            { value: '85 kg', label: 'Food Saved' },
-            { value: '48', label: 'People Helped' },
-          ].map(stat => (
-            <div key={stat.label} className="text-center">
-              <p className="text-xl font-extrabold text-white">{stat.value}</p>
-              <p className="text-[10px] font-bold text-white/70 mt-0.5">{stat.label}</p>
+        {/* Map Preview Hero */}
+        <button 
+          onClick={() => navigate('/community/map')}
+          className="relative w-full h-40 rounded-3xl overflow-hidden border border-border-subtle shadow-sm group"
+        >
+          {/* Map Background Pattern */}
+          <div className="absolute inset-0 bg-[#e5e3df]">
+            <div className="absolute inset-0 opacity-50" style={{
+              backgroundImage: 'linear-gradient(to right, #cfcdca 2px, transparent 2px), linear-gradient(to bottom, #cfcdca 2px, transparent 2px)',
+              backgroundSize: '30px 30px'
+            }} />
+            <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-[#c2dcb3] rounded-full blur-xl opacity-60" />
+            <div className="absolute bottom-1/4 right-1/4 w-32 h-8 bg-[#a5c2df] rotate-45 blur-md opacity-60" />
+          </div>
+          
+          {/* Mock Pins */}
+          <div className="absolute top-1/3 left-1/4 w-8 h-8 bg-success text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white text-sm group-hover:scale-110 transition-transform">🍅</div>
+          <div className="absolute bottom-1/4 right-1/3 w-8 h-8 bg-info text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white text-sm group-hover:scale-110 transition-transform">🥛</div>
+          <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-success text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white text-sm group-hover:scale-110 transition-transform">🍞</div>
+          
+          {/* My Location Pulse */}
+          <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-brand rounded-full border-2 border-white shadow-md">
+            <div className="absolute inset-0 bg-brand rounded-full animate-ping opacity-50" />
+          </div>
+
+          {/* Overlay Content */}
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex justify-between items-end">
+            <div className="text-left">
+              <h2 className="text-white font-extrabold text-lg flex items-center gap-1.5"><MapPin className="w-4 h-4" /> Nearby Activity</h2>
+              <p className="text-white/80 text-xs font-medium mt-0.5">4 offers · 2 requests within 2km</p>
             </div>
-          ))}
-        </div>
+            <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+              <ChevronRight className="w-5 h-5" />
+            </div>
+          </div>
+        </button>
 
         {/* My Surplus CTA */}
         <button
           onClick={() => navigate('/community/create')}
-          className="flex items-center gap-3 bg-brand-light border border-brand/20 rounded-2xl px-4 py-3.5 hover:bg-brand hover:text-white hover:border-brand transition-all group"
+          className="flex items-center gap-3 bg-bg-elevated border border-border-strong rounded-xl px-4 py-3.5 hover:shadow-sm transition-all group"
         >
-          <div className="w-10 h-10 rounded-xl bg-brand flex items-center justify-center group-hover:bg-white/20">
-            <Plus className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 rounded-lg bg-bg-sunken flex items-center justify-center group-hover:bg-bg-base transition-colors border border-border-subtle">
+            <Plus className="w-5 h-5 text-text-primary" />
           </div>
           <div className="flex-1 text-left">
-            <p className="font-extrabold text-brand group-hover:text-white">Share Surplus Food</p>
-            <p className="text-xs text-brand/70 group-hover:text-white/70">List expiring items for neighbors</p>
+            <p className="font-extrabold text-text-primary">Share Surplus Food</p>
+            <p className="text-xs text-text-secondary">List expiring items for neighbors</p>
           </div>
-          <ChevronRight className="w-4 h-4 text-brand group-hover:text-white/70" />
+          <ChevronRight className="w-4 h-4 text-text-tertiary group-hover:text-text-primary transition-colors" />
         </button>
 
         {/* Offers Nearby */}
@@ -66,16 +86,15 @@ export default function CommunityHome() {
               <button
                 key={listing.id}
                 onClick={() => navigate('/community/listing', { state: { listing } })}
-                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl p-4 text-left hover:shadow-md hover:-translate-y-0.5 active:scale-[0.99] transition-all relative overflow-hidden"
+                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl p-4 text-left hover:shadow-sm hover:border-border-strong active:scale-[0.99] transition-all"
               >
-                <div className="absolute top-0 left-0 w-1 h-full bg-brand-sage-400 rounded-l-2xl" />
-                <div className="w-14 h-14 bg-bg-sunken rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                <div className="w-14 h-14 bg-bg-sunken rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border border-border-subtle drop-shadow-sm">
                   {listing.emoji}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-1">
                     <p className="font-extrabold text-text-primary text-sm">{listing.item}</p>
-                    <Badge variant="success" size="xs">Offer</Badge>
+                    <Badge variant="neutral" size="xs" className="bg-bg-sunken text-success">Offer</Badge>
                   </div>
                   <p className="text-xs text-text-secondary leading-relaxed line-clamp-2 mb-2">{listing.description}</p>
                   <div className="flex items-center gap-3">
@@ -83,10 +102,10 @@ export default function CommunityHome() {
                       <MapPin className="w-3 h-3" />{listing.distanceKm} km
                     </span>
                     <span className="text-[10px] font-bold text-text-tertiary flex items-center gap-1">
-                      <Star className="w-3 h-3 text-warning" />{listing.hostTrustScore}
+                      <Star className="w-3 h-3 text-text-secondary" />{listing.hostTrustScore}
                     </span>
                     {listing.expiryHours && (
-                      <span className="text-[10px] font-bold text-warning">
+                      <span className="text-[10px] font-bold text-text-secondary">
                         Expires in {listing.expiryHours}h
                       </span>
                     )}
@@ -108,14 +127,15 @@ export default function CommunityHome() {
               <button
                 key={listing.id}
                 onClick={() => navigate('/community/listing', { state: { listing } })}
-                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl p-3.5 text-left hover:shadow-sm active:scale-[0.99] transition-all relative overflow-hidden"
+                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl p-4 text-left hover:shadow-sm hover:border-border-strong active:scale-[0.99] transition-all"
               >
-                <div className="absolute top-0 left-0 w-1 h-full bg-brand-sky-400 rounded-l-2xl" />
-                <span className="text-xl mt-0.5">{listing.emoji}</span>
+                <div className="w-10 h-10 bg-bg-sunken rounded-lg flex items-center justify-center text-xl flex-shrink-0 border border-border-subtle drop-shadow-sm">
+                  {listing.emoji}
+                </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-0.5">
                     <p className="font-bold text-text-primary text-sm">{listing.item}</p>
-                    <Badge variant="info" size="xs">Request</Badge>
+                    <Badge variant="neutral" size="xs" className="bg-bg-sunken text-info">Request</Badge>
                   </div>
                   <p className="text-xs text-text-secondary line-clamp-1">{listing.description}</p>
                   <p className="text-[10px] text-text-tertiary mt-1 flex items-center gap-1">

@@ -43,7 +43,7 @@ export default function MealGenerator() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Meal Generator" subtitle="AI Recipe Discovery" backRoute="" />
+      <PageHeader title="Meal Generator" subtitle="AI Recipe Discovery" backRoute="/home" />
 
       <div className="px-5 pb-8 pt-4 flex-1 flex flex-col">
         <div className="bg-brand-plum-50 border border-brand-plum-200 rounded-2xl p-4 flex gap-3 items-center mb-6">
@@ -106,7 +106,7 @@ export default function MealGenerator() {
                 <button
                   key={opt}
                   onClick={() => setPreferences({ ...preferences, time: opt })}
-                  className={`flex-shrink-0 px-4 py-2.5 rounded-pill font-bold transition-all text-sm whitespace-nowrap ${
+                  className={`flex-shrink-0 px-4 py-2.5 rounded-xl font-bold transition-all text-sm whitespace-nowrap ${
                     preferences.time === opt
                       ? 'bg-text-primary text-bg-base'
                       : 'bg-bg-elevated text-text-secondary border border-border-subtle hover:border-border-strong'

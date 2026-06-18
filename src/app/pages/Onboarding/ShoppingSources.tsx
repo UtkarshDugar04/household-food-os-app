@@ -29,8 +29,8 @@ export default function ShoppingSources() {
         <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-bg-sunken text-text-secondary">
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <div className="flex-1 h-1.5 bg-bg-sunken rounded-pill overflow-hidden">
-          <div className="h-full bg-brand w-[80%] rounded-pill"></div>
+        <div className="flex-1 h-1.5 bg-bg-sunken rounded-xl overflow-hidden">
+          <div className="h-full bg-brand w-[80%] rounded-xl"></div>
         </div>
         <span className="text-xs font-bold text-text-tertiary">4 OF 6</span>
       </div>
@@ -44,13 +44,11 @@ export default function ShoppingSources() {
         </p>
       </div>
 
-      <div className="relative mb-6">
-        <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-text-tertiary" />
-        </div>
+      <div className="flex items-center gap-3 bg-bg-sunken border border-border-subtle rounded-xl px-4 py-3 mb-6 focus-within:border-brand-muted transition-colors">
+        <Search className="h-5 w-5 text-text-tertiary" />
         <input 
           type="text"
-          className="w-full bg-bg-elevated border border-border-subtle rounded-xl py-3 pl-10 pr-4 text-text-primary placeholder-text-tertiary focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand"
+          className="w-full bg-transparent text-text-primary placeholder-text-tertiary focus:outline-none"
           placeholder="Search stores..."
         />
       </div>

@@ -19,7 +19,7 @@ export default function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 rounded-pill font-bold transition-all duration-normal ease-spring active:scale-95';
+  const baseStyles = 'inline-flex items-center justify-center gap-2 rounded-xl font-bold transition-all duration-normal ease-spring active:scale-95';
   
   const variants = {
     primary: 'bg-brand text-white shadow-[0_4px_12px_rgba(240,123,12,0.3)] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(240,123,12,0.4)]',

@@ -16,7 +16,7 @@ export default function CommunityHistory() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Exchange History" subtitle="Your Community Impact" backRoute="" />
+      <PageHeader title="Exchange History" subtitle="Your Community Impact" backRoute="/community" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         {/* Total Impact */}

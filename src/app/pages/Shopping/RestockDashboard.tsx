@@ -38,8 +38,8 @@ export default function RestockDashboard() {
             3 items running low for this week's meal plan. 
             Restocking now prevents 2 recipe gaps.
           </p>
-          <div className="w-full h-2 bg-brand-sky-200 rounded-pill mt-3 overflow-hidden">
-            <div className="h-full bg-brand-sky-500 rounded-pill" style={{ width: '74%' }} />
+          <div className="w-full h-2 bg-brand-sky-200 rounded-md mt-3 overflow-hidden">
+            <div className="h-full bg-brand-sky-500 rounded-md" style={{ width: '74%' }} />
           </div>
         </div>
 

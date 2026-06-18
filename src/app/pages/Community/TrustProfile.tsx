@@ -8,7 +8,7 @@ export default function TrustProfile() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Trust Profile" subtitle="Community Verification" backRoute="" />
+      <PageHeader title="Trust Profile" subtitle="Community Verification" backRoute="/community" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col gap-6">
         <div className="flex flex-col items-center text-center">

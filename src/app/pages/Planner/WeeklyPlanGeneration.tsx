@@ -55,7 +55,7 @@ export default function WeeklyPlanGeneration() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-base">
-      <PageHeader title="Plan Next Week" subtitle="AI will build a 7-day meal schedule" backRoute="" />
+      <PageHeader title="Plan Next Week" subtitle="AI will build a 7-day meal schedule" backRoute="/planner" />
 
       <div className="px-5 pb-8 pt-4 flex flex-col flex-1 gap-6">
         <div>
