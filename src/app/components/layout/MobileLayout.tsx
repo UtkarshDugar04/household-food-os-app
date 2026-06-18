@@ -18,7 +18,7 @@ export default function MobileLayout() {
       <div className="w-full max-w-md h-screen flex flex-col relative bg-bg-base shadow-2xl overflow-hidden">
         {/* Main Content Area */}
         <div className={`flex-1 overflow-y-auto scrollbar-hide ${showNav ? 'pb-[80px]' : ''}`}>
-          <div className="animate-in">
+          <div key={location.key} className="page-enter">
             <Outlet />
           </div>
         </div>
@@ -27,8 +27,7 @@ export default function MobileLayout() {
         {showAI && (
           <button
             onClick={() => navigate('/ai-chat')}
-            className="absolute bottom-[88px] right-4 w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center z-40 shadow-[0_4px_20px_rgba(240,123,12,0.45)] hover:bg-brand-hover hover:shadow-[0_6px_28px_rgba(240,123,12,0.55)] hover:-translate-y-1 active:scale-95 transition-all duration-normal"
-            style={{ animation: showNav ? 'none' : undefined }}
+            className="absolute bottom-[88px] right-4 w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center z-40 shadow-[0_4px_20px_rgba(240,123,12,0.45)] hover:bg-brand-hover hover:shadow-[0_6px_28px_rgba(240,123,12,0.55)] hover:-translate-y-1 active:scale-95 transition-all duration-normal ease-spring"
           >
             <BotMessageSquare className="w-6 h-6" />
           </button>
@@ -40,3 +39,4 @@ export default function MobileLayout() {
     </div>
   );
 }
+

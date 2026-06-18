@@ -28,7 +28,7 @@ export default function HomeDashboard() {
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
       {/* ---- HEADER ---- */}
-      <div className="px-5 pt-6 pb-4 flex justify-between items-start">
+      <div className="px-5 pt-6 pb-4 flex justify-between items-start page-enter stagger-1">
         <div>
           <p className="text-xs font-bold text-text-tertiary uppercase tracking-widest mb-1">Wednesday, Jun 18</p>
           <h1 className="text-2xl font-extrabold text-text-primary tracking-tight leading-tight">
@@ -55,7 +55,7 @@ export default function HomeDashboard() {
       </div>
 
       {/* ---- DAILY BRIEFING (Humanized Insights) ---- */}
-      <div className="px-5 mb-8 mt-2">
+      <div className="px-5 mb-8 mt-2 page-enter stagger-2">
         <button
           onClick={() => navigate('/home/insights')}
           className="w-full text-left illustration-container rounded-[24px] p-5 flex flex-col gap-4 hover:-translate-y-0.5 active:scale-[0.98] transition-transform"
@@ -74,7 +74,7 @@ export default function HomeDashboard() {
             </div>
           </div>
           <div className="relative h-1.5 w-full bg-black/5 rounded-md overflow-hidden z-10">
-             <div className="absolute top-0 left-0 h-full bg-brand rounded-md transition-all duration-1000" style={{ width: `${(householdSnapshot.proteinToday / householdSnapshot.proteinGoal) * 100}%` }} />
+             <div className="absolute top-0 left-0 h-full bg-brand rounded-md progress-fill" style={{ width: `${(householdSnapshot.proteinToday / householdSnapshot.proteinGoal) * 100}%` }} />
           </div>
           <div className="absolute right-0 bottom-0 opacity-[0.03] text-9xl translate-x-1/4 translate-y-1/4 pointer-events-none">🥗</div>
         </button>
@@ -82,7 +82,7 @@ export default function HomeDashboard() {
 
       {/* ---- EXPIRY ALERT BANNER (if critical items) ---- */}
       {criticalItems.length > 0 && (
-        <div className="mx-5 mb-5">
+        <div className="mx-5 mb-5 page-enter stagger-3">
           <button
             onClick={() => navigate('/home/expiry-center')}
             className="w-full bg-error-bg border border-error/20 rounded-2xl px-4 py-3 flex items-center gap-3 hover:bg-error/10 transition-colors active:scale-[0.98]"
@@ -105,7 +105,7 @@ export default function HomeDashboard() {
 
       {/* ---- TONIGHT'S RECOMMENDATION ---- */}
       <div className="px-5 mb-5">
-        <div className="flex justify-between items-center mb-3">
+        <div className="flex justify-between items-center mb-3 page-enter stagger-4">
           <h2 className="text-lg font-extrabold text-text-primary">Tonight's Recommendation</h2>
           <button
             onClick={() => navigate('/recommendations/stack')}

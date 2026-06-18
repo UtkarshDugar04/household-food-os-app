@@ -57,8 +57,8 @@ export default function ChatHome() {
 
       {/* Chat Area */}
       <div className="flex-1 overflow-y-auto scrollbar-hide px-4 py-4 flex flex-col gap-4">
-        {messages.map(msg => (
-          <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} gap-2.5`}>
+        {messages.map((msg, idx) => (
+          <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} gap-2.5 page-enter`} style={{ animationDelay: `${idx * 30}ms` }}>
             {msg.role === 'ai' && (
               <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-plum-400 to-brand-plum-600 flex items-center justify-center flex-shrink-0 mt-1">
                 <Sparkles className="w-4 h-4 text-white" />

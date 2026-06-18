@@ -25,12 +25,12 @@ export default function RecipeDetail() {
         </button>
         <button
           onClick={() => setSaved(!saved)}
-          className="absolute top-12 right-4 w-9 h-9 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center"
+          className="absolute top-12 right-4 w-9 h-9 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center active:scale-90 transition-all duration-fast ease-spring"
         >
-          <Bookmark className={`w-5 h-5 ${saved ? 'text-white fill-white' : 'text-white'}`} />
+          <Bookmark key={String(saved)} className={`w-5 h-5 ${saved ? 'text-white fill-white success-pop' : 'text-white'}`} />
         </button>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-8xl" style={{ filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.2))' }}>
+          <span className="text-8xl scale-in" style={{ filter: 'drop-shadow(0 8px 20px rgba(0,0,0,0.2))' }}>
             {recipe.emoji}
           </span>
         </div>
@@ -102,9 +102,9 @@ export default function RecipeDetail() {
           </h3>
           <div className="flex flex-col gap-2">
             {recipe.ingredients.map((ing: any, i: number) => (
-              <div key={i} className={`flex items-center gap-3 px-4 py-2.5 rounded-xl border ${
+              <div key={i} className={`flex items-center gap-3 px-4 py-2.5 rounded-xl border page-enter ${
                 ing.available ? 'bg-success-bg border-success/15' : 'bg-error-bg border-error/15'
-              }`}>
+              }`} style={{ animationDelay: `${i * 35}ms` }}>
                 <span className={`w-2 h-2 rounded-full flex-shrink-0 ${ing.available ? 'bg-success' : 'bg-error'}`} />
                 <span className="flex-1 text-sm font-semibold text-text-primary">{ing.name}</span>
                 <span className="text-xs text-text-tertiary">{ing.quantity}</span>

@@ -58,7 +58,7 @@ export default function ShoppingListBuilder() {
         {categories.map(cat => {
           const items = shoppingList.filter(i => i.category === cat);
           return (
-            <div key={cat}>
+            <div key={cat} className="page-enter" style={{ animationDelay: `${categories.indexOf(cat) * 60}ms` }}>
               <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-widest mb-2.5">{cat}</p>
               <div className="flex flex-col gap-2">
                 {items.map(item => {

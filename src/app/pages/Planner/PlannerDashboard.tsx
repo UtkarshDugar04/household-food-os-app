@@ -18,7 +18,7 @@ export default function PlannerDashboard() {
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
       {/* Header */}
-      <div className="px-5 pt-6 pb-4">
+      <div className="px-5 pt-6 pb-4 page-enter stagger-1">
         <p className="text-xs font-bold text-text-tertiary uppercase tracking-widest mb-0.5">Meal</p>
         <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">Planner</h1>
         <p className="text-sm text-text-secondary mt-0.5">Future Decision Making</p>
@@ -26,7 +26,7 @@ export default function PlannerDashboard() {
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Weekly Calendar */}
-        <div className="illustration-container rounded-[24px] p-5">
+        <div className="illustration-container rounded-[24px] p-5 page-enter stagger-2">
           <div className="flex justify-between items-center mb-5 relative z-10">
             <div>
               <h2 className="font-extrabold text-text-primary text-lg leading-tight">Your Week</h2>
@@ -57,7 +57,7 @@ export default function PlannerDashboard() {
                   <span className={`text-base font-extrabold ${isToday ? 'text-text-primary' : 'text-text-secondary'}`}>
                     {day.dateNum}
                   </span>
-                  <div className={`w-1 h-1 rounded-full ${isToday ? 'bg-brand' : hasMeals ? 'bg-border-strong' : 'bg-transparent'}`} />
+                  <div className={`w-1 h-1 rounded-full transition-all duration-300 ${isToday ? 'bg-brand' : hasMeals ? 'bg-border-strong' : 'bg-transparent'}`} />
                 </button>
               );
             })}
@@ -65,7 +65,7 @@ export default function PlannerDashboard() {
         </div>
 
         {/* Today's Meals Preview */}
-        <div>
+        <div className="page-enter stagger-3">
           <div className="flex justify-between items-center mb-3">
             <h2 className="text-base font-extrabold text-text-primary">Today's Plan</h2>
             <button onClick={() => navigate('/planner/day', { state: { day: weeklyMealPlan[todayIndex] } })} className="text-xs font-bold text-brand hover:underline flex items-center gap-0.5">

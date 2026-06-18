@@ -22,14 +22,12 @@ export default function CommunityHome() {
         </div>
       </div>
 
-      <div className="px-5 pb-6 flex flex-col gap-5">
-        {/* Map Preview Hero */}
-        <button 
+      <div className="px-5 pb-8 flex flex-col gap-6">
+        {/* Map Hero */}
+        <button
           onClick={() => navigate('/community/map')}
-          className="relative w-full h-40 rounded-3xl overflow-hidden border border-border-subtle shadow-sm group"
-        >
-          {/* Map Background Pattern */}
-          <div className="absolute inset-0 bg-[#e5e3df]">
+          className="w-full relative h-48 rounded-[24px] overflow-hidden border border-border-strong shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98] transition-all page-enter stagger-1"
+        >  <div className="absolute inset-0 bg-[#e5e3df]">
             <div className="absolute inset-0 opacity-50" style={{
               backgroundImage: 'linear-gradient(to right, #cfcdca 2px, transparent 2px), linear-gradient(to bottom, #cfcdca 2px, transparent 2px)',
               backgroundSize: '30px 30px'
@@ -63,7 +61,7 @@ export default function CommunityHome() {
         {/* My Surplus CTA */}
         <button
           onClick={() => navigate('/community/create')}
-          className="flex items-center gap-3 bg-bg-elevated border border-border-strong rounded-xl px-4 py-3.5 hover:shadow-sm transition-all group"
+          className="flex items-center gap-3 bg-bg-elevated border border-border-strong rounded-xl px-4 py-3.5 hover:shadow-sm transition-all group page-enter stagger-2"
         >
           <div className="w-10 h-10 rounded-lg bg-bg-sunken flex items-center justify-center group-hover:bg-bg-base transition-colors border border-border-subtle">
             <Plus className="w-5 h-5 text-text-primary" />
@@ -82,11 +80,12 @@ export default function CommunityHome() {
             <Badge variant="success" dot>{offers.length} offers</Badge>
           </div>
           <div className="flex flex-col gap-3">
-            {offers.slice(0, 4).map(listing => (
+            {offers.slice(0, 4).map((listing, idx) => (
               <button
                 key={listing.id}
                 onClick={() => navigate('/community/listing', { state: { listing } })}
-                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl p-4 text-left hover:shadow-sm hover:border-border-strong active:scale-[0.99] transition-all"
+                className="flex gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl p-4 text-left hover:shadow-sm hover:border-border-strong active:scale-[0.99] transition-all page-enter card-interactive"
+                style={{ animationDelay: `${(idx * 30) + 150}ms` }}
               >
                 <div className="w-14 h-14 bg-bg-sunken rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border border-border-subtle drop-shadow-sm">
                   {listing.emoji}

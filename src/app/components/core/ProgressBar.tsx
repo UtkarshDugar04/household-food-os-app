@@ -61,7 +61,7 @@ export default function ProgressBar({
       )}
       <div className={`w-full ${trackColors[color]} rounded-md overflow-hidden ${heights[size]}`}>
         <div
-          className={`${heights[size]} ${fillColors[color]} rounded-md ${animated ? 'transition-all duration-slow ease-decelerate' : ''}`}
+          className={`${heights[size]} ${fillColors[color]} rounded-md progress-fill ${animated ? 'transition-all duration-slow ease-decelerate' : ''}`}
           style={{ width: `${percentage}%` }}
         />
       </div>

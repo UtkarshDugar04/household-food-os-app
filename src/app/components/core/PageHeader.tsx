@@ -18,7 +18,7 @@ export default function PageHeader({ title, subtitle, backRoute, rightElement, t
       {backRoute !== undefined && (
         <button
           onClick={() => backRoute ? navigate(backRoute) : navigate(-1)}
-          className="w-9 h-9 rounded-full bg-bg-sunken flex items-center justify-center text-text-secondary hover:bg-bg-elevated hover:text-text-primary transition-all flex-shrink-0"
+          className="w-9 h-9 rounded-full bg-bg-sunken flex items-center justify-center text-text-secondary hover:bg-bg-elevated hover:text-text-primary active:scale-90 transition-all duration-fast ease-spring flex-shrink-0"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>

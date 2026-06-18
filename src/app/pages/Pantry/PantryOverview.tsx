@@ -197,12 +197,12 @@ export default function PantryOverview() {
         <div className="fixed inset-0 z-50 flex flex-col justify-end">
           {/* Backdrop */}
           <div 
-            className="absolute inset-0 bg-text-primary/40 backdrop-blur-[2px] transition-opacity duration-300 animate-in fade-in"
+            className="absolute inset-0 bg-text-primary/40 backdrop-blur-[2px] fade-in"
             onClick={() => setIsBottomSheetOpen(false)}
           ></div>
           
           {/* Sheet */}
-          <div className="relative bg-bg-base w-full rounded-t-[32px] shadow-[0_-8px_30px_rgba(0,0,0,0.12)] pt-3 pb-12 flex flex-col animate-in slide-in-from-bottom duration-300">
+          <div className="relative bg-bg-base w-full rounded-t-[32px] shadow-[0_-8px_30px_rgba(0,0,0,0.12)] pt-3 pb-12 flex flex-col sheet-enter">
             <div className="flex justify-center mb-4">
               <div className="w-12 h-1.5 bg-border-strong rounded-full opacity-50"></div>
             </div>
@@ -215,9 +215,10 @@ export default function PantryOverview() {
                   <button
                     key={opt.label}
                     onClick={() => { setIsBottomSheetOpen(false); navigate(opt.route); }}
-                    className="flex items-center gap-4 p-4 rounded-2xl bg-bg-sunken border border-border-subtle hover:border-border-strong hover:bg-bg-elevated active:scale-[0.98] transition-all text-left group"
+                    className="flex items-center gap-4 p-4 rounded-2xl bg-bg-sunken border border-border-subtle hover:border-border-strong hover:bg-bg-elevated active:scale-[0.98] transition-all text-left group page-enter"
+                    style={{ animationDelay: `${addOptions.indexOf(opt) * 40 + 60}ms` }}
                   >
-                    <div className={`w-12 h-12 rounded-full ${opt.bg} flex items-center justify-center flex-shrink-0 shadow-sm border border-border-subtle group-hover:scale-105 transition-transform`}>
+                    <div className={`w-12 h-12 rounded-xl ${opt.bg} flex items-center justify-center flex-shrink-0 shadow-sm border border-border-subtle group-hover:scale-110 transition-transform duration-200 ease-spring`}>
                       <opt.icon className={`w-5 h-5 ${opt.color}`} />
                     </div>
                     <div className="flex-1 min-w-0">

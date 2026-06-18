@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, ChevronRight, Plus, Sparkles, X } from 'lucide-react';
+import { Search, ChevronRight, ChevronLeft, Plus, Sparkles, X } from 'lucide-react';
 import PageHeader from '../../components/core/PageHeader';
 import { recipes } from '../../data/mockData';
 
@@ -44,7 +44,7 @@ export default function EditMeal() {
                 onClick={() => navigate('/planner/day')}
                 className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl px-4 py-3 hover:border-brand-muted hover:shadow-sm active:scale-[0.99] transition-all text-left relative overflow-hidden"
               >
-                {recipe.matchScore > 90 && (
+                {'matchScore' in recipe && (recipe as any).matchScore > 90 && (
                   <div className="absolute top-0 right-0 w-8 h-8 bg-brand rounded-bl-2xl flex items-center justify-center">
                     <Sparkles className="w-3 h-3 text-white" />
                   </div>

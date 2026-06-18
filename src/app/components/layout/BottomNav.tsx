@@ -21,23 +21,33 @@ export default function BottomNav() {
             <NavLink
               key={item.to}
               to={item.to}
-              className="flex flex-col items-center justify-center p-2 transition-all duration-normal relative"
+              className="flex flex-col items-center justify-center p-2 transition-all duration-normal relative active:scale-90"
+              style={{ transitionTimingFunction: 'cubic-bezier(0.35, 0, 0, 1.3)' }}
             >
-              <div className={`flex flex-col items-center gap-1.5 transition-all duration-normal ${isActive ? 'scale-105' : 'scale-100 opacity-60 hover:opacity-80'}`}>
+              <div
+                className={`flex flex-col items-center gap-1.5 transition-all ${
+                  isActive
+                    ? 'scale-105 opacity-100'
+                    : 'scale-100 opacity-50 hover:opacity-75'
+                }`}
+                style={{ transitionDuration: '200ms', transitionTimingFunction: 'cubic-bezier(0.35, 0, 0, 1.3)' }}
+              >
                 <item.icon
-                  className={`w-5 h-5 relative z-10 transition-colors duration-normal ${
-                    isActive ? 'text-text-primary' : 'text-text-primary'
-                  }`}
+                  className="w-5 h-5 relative z-10 text-text-primary transition-all duration-normal"
                   strokeWidth={isActive ? 2.5 : 2}
                 />
-                <span className={`text-[10px] leading-none font-bold relative z-10 transition-colors duration-normal ${
-                  isActive ? 'text-text-primary' : 'text-text-primary'
-                }`}>
+                <span className={`text-[10px] leading-none font-bold relative z-10 text-text-primary transition-all duration-normal ${isActive ? 'opacity-100' : 'opacity-70'}`}>
                   {item.label}
                 </span>
-                {isActive && (
-                  <div className="absolute -top-2 w-1 h-1 rounded-full bg-text-primary" />
-                )}
+                <div
+                  className="absolute -top-2 w-1 h-1 rounded-full bg-text-primary transition-all"
+                  style={{
+                    transitionDuration: '220ms',
+                    transitionTimingFunction: 'cubic-bezier(0.35, 0, 0, 1.3)',
+                    transform: isActive ? 'scale(1)' : 'scale(0)',
+                    opacity: isActive ? 1 : 0,
+                  }}
+                />
               </div>
             </NavLink>
           );
@@ -46,3 +56,4 @@ export default function BottomNav() {
     </nav>
   );
 }
+

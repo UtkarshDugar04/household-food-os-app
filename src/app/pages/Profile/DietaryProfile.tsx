@@ -22,9 +22,9 @@ export default function DietaryProfile() {
             {dietTypes.map(d => (
               <button
                 key={d}
-                onClick={() => toggleDiet(d)}
-                className={`px-4 py-2.5 rounded-xl font-bold text-sm transition-all border ${
-                  selectedDiets.includes(d)
+                onClick={() => setDiet(d)}
+                className={`px-4 py-2.5 rounded-xl font-bold text-sm transition-all border active:scale-95 ${
+                  diet === d
                     ? 'bg-brand border-brand text-white shadow-[0_4px_12px_rgba(240,123,12,0.3)]'
                     : 'bg-bg-elevated text-text-secondary border-border-subtle hover:border-border-strong'
                 }`}

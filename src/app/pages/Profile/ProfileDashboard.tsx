@@ -22,7 +22,7 @@ export default function ProfileDashboard() {
   return (
     <div className="flex flex-col bg-bg-base min-h-screen">
       {/* Header */}
-      <div className="px-5 pt-6 pb-4 flex justify-between items-start">
+      <div className="px-5 pt-6 pb-4 flex justify-between items-start page-enter stagger-1">
         <div>
           <p className="text-xs font-bold text-text-tertiary uppercase tracking-widest mb-0.5">Your</p>
           <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">Profile</h1>
@@ -34,7 +34,7 @@ export default function ProfileDashboard() {
 
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Household Card */}
-        <div className="illustration-container rounded-[24px] p-6 relative overflow-hidden">
+        <div className="illustration-container rounded-[24px] p-6 relative overflow-hidden page-enter stagger-2">
           <div className="flex flex-col items-center text-center relative z-10">
             <div className="w-20 h-20 rounded-full bg-white/60 shadow-sm flex items-center justify-center mb-4 border border-border-subtle">
               <span className="text-4xl food-glow">🏡</span>
@@ -58,7 +58,7 @@ export default function ProfileDashboard() {
         </div>
 
         {/* Impact Summary */}
-        <div className="grid grid-cols-3 gap-2.5">
+        <div className="grid grid-cols-3 gap-2.5 page-enter stagger-3">
           {[
             { label: 'Waste Prevented', value: `${impactStats.wastePreventedKg}kg`, emoji: '🌱' },
             { label: 'Money Saved', value: `₹${(impactStats.moneySavedRupees/1000).toFixed(1)}k`, emoji: '💰' },
@@ -73,7 +73,7 @@ export default function ProfileDashboard() {
         </div>
 
         {/* Dietary Tags */}
-        <div>
+        <div className="page-enter stagger-4">
           <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-widest mb-2.5">Dietary Preferences</p>
           <div className="flex flex-wrap gap-2">
             {[...userProfile.dietaryPreferences, ...userProfile.cuisinePreferences].map(tag => (
@@ -91,11 +91,12 @@ export default function ProfileDashboard() {
 
         {/* Menu Items */}
         <div className="flex flex-col gap-2">
-          {menuItems.map(item => (
+          {menuItems.map((item, idx) => (
             <button
               key={item.label}
               onClick={() => navigate(item.route)}
-              className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl px-4 py-3.5 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left"
+              className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-xl px-4 py-3.5 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left page-enter card-interactive"
+              style={{ animationDelay: `${(idx * 30) + 200}ms` }}
             >
               <div className="w-9 h-9 rounded-lg bg-bg-sunken flex items-center justify-center flex-shrink-0 border border-border-subtle">
                 <item.icon className={`w-4.5 h-4.5 ${item.color}`} />

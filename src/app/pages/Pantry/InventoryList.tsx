@@ -65,11 +65,12 @@ export default function InventoryList() {
 
       {/* Item List */}
       <div className="px-5 flex flex-col gap-2 pb-6">
-        {filtered.map(item => (
+        {filtered.map((item, idx) => (
           <button
             key={item.id}
             onClick={() => navigate('/pantry/item', { state: { item } })}
-            className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl px-4 py-3 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left"
+            className="flex items-center gap-3.5 bg-bg-elevated border border-border-subtle rounded-2xl px-4 py-3 hover:border-border-strong hover:shadow-sm active:scale-[0.99] transition-all text-left page-enter card-interactive"
+            style={{ animationDelay: `${idx * 30}ms` }}
           >
             <span className="text-2xl">{item.emoji}</span>
             <div className="flex-1 min-w-0">

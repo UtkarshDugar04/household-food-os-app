@@ -91,7 +91,7 @@ export default function CookMode() {
 
       {/* Current Step */}
       <div className="flex-1 px-5 flex flex-col justify-center">
-        <div className="text-center mb-8">
+        <div key={currentStep} className="text-center mb-8 page-enter">
           <div className="w-16 h-16 rounded-2xl bg-brand-light mx-auto flex items-center justify-center mb-6 shadow-sm">
             <span className="text-3xl font-extrabold text-brand">{currentStep + 1}</span>
           </div>
